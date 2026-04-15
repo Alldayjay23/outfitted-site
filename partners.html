@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="color-scheme" content="light only" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Partner With Outfitted — Affiliate & Brand Partnerships</title>
   <meta name="description" content="Partner with Outfitted — an AI fashion platform reaching style-conscious shoppers aged 18-35. Affiliate commerce, featured placements, and co-marketing opportunities." />
@@ -11,23 +12,11 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --coral: #FF6F61; --coral-dark: #E55A4D; --sage: #87A96B; --cream: #FFF5E9; --cream-dark: #F5EAD8; --ink: #1A1410; --ink-light: #7A6A60; --white: #FFFFFF; }
+
     html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 3rem; background: #FFF5E9; border-bottom: 1px solid rgba(26,20,16,0.15); border-bottom: 1px solid rgba(255,111,97,0.12); }
-    .nav-logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
-    .spark { color: var(--coral); }
-    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
-    #header-nav .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #1A1410 !important; text-decoration: none; transition: color 0.2s; font-weight: 600; }
-    #header-nav .nav-links a:hover, #header-nav .nav-links a.active { color: var(--coral) !important; }
-    #header-nav .nav-cta { background: var(--coral) !important; color: var(--white) !important; padding: 0.55rem 1.4rem; border-radius: 100px; }
-    .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 201; }
-    .hamburger span { display: block; width: 26px; height: 2px; background: var(--ink); border-radius: 2px; }
-    .mobile-overlay { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(255,245,233,0.97); backdrop-filter: blur(16px); flex-direction: column; align-items: center; justify-content: center; gap: 2rem; }
-    .mobile-overlay.open { display: flex; }
-    .mobile-overlay-close { position: absolute; top: 1.25rem; right: 1.5rem; background: none; border: none; font-size: 2rem; color: var(--ink); cursor: pointer; }
-    .mobile-overlay a { font-size: 1.1rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #1A1410; text-decoration: none; }
-    .mobile-overlay a:hover { color: #FF6F61; }
-    .mobile-overlay .nav-cta { background: var(--coral); color: var(--white) !important; padding: 0.65rem 1.6rem; border-radius: 100px; }
+    html { background: #FFF5E9; color-scheme: light; }
+    body { font-family: 'DM Sans', sans-serif; background: #FFF5E9; color: var(--ink); overflow-x: hidden; }
+    .spark { color: #FF6F61; }
     .hero { min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 9rem 2rem 5rem; text-align: center; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; top: -10%; left: 50%; transform: translateX(-50%); width: 70vw; height: 70vw; background: radial-gradient(ellipse, rgba(255,111,97,0.07) 0%, transparent 65%); pointer-events: none; }
     .hero-content { position: relative; z-index: 1; animation: fadeUp 0.9s ease both; max-width: 760px; }
@@ -94,9 +83,9 @@
     footer { background: var(--ink); padding: 2.5rem 3rem; border-top: 1px solid rgba(255,245,233,0.06); }
     .footer-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
     .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--cream); }
-    .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; }
-    .footer-nav a { font-size: 0.75rem; color: rgba(255,245,233,0.4); text-decoration: none; transition: color 0.2s; letter-spacing: 0.06em; text-transform: uppercase; }
-    .footer-nav a:hover { color: var(--coral); }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.75rem; color: rgba(255,245,233,0.4) !important; text-decoration: none; transition: color 0.2s; letter-spacing: 0.06em; text-transform: uppercase; }
+    .footer-links a:hover { color: var(--coral); }
     .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,245,233,0.06); }
     .footer-copy { font-size: 0.75rem; color: rgba(255,245,233,0.25); }
     .footer-legal { display: flex; gap: 1.5rem; }
@@ -104,38 +93,57 @@
     .footer-legal a:hover { color: var(--coral); }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
     @media (max-width: 900px) {
-      nav { padding: 1rem 1.5rem; } .nav-links { display: none; } .hamburger { display: flex; } section { padding: 4rem 1.5rem; } .hero { padding: 7rem 1.5rem 3rem; }
+      section { padding: 4rem 1.5rem; } .hero { padding: 7rem 1.5rem 3rem; }
       .audience-grid { grid-template-columns: repeat(2,1fr); } .aud-bullets { grid-template-columns: 1fr; }
       .why-grid, .types-grid { grid-template-columns: 1fr; } .how-steps { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; } footer { padding: 2rem 1.5rem; }
       .footer-top, .footer-bottom { flex-direction: column; text-align: center; }
     }
+      #topnav { position:fixed; top:0; left:0; right:0; z-index:9999; display:flex; align-items:center; justify-content:space-between; padding:1.25rem 3rem; background:#FFF5E9; border-bottom:2px solid rgba(255,111,97,0.25); }
+      #topnav a.logo { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:600; color:#1A1410; text-decoration:none; display:flex; align-items:center; gap:0.5rem; }
+      #topnav .spark { color:#FF6F61; }
+      #topnav ul { display:flex; align-items:center; gap:2rem; list-style:none; margin:0; padding:0; }
+      #topnav ul li { list-style:none; }
+      #topnav ul li a { font-size:0.8rem !important; font-weight:700 !important; letter-spacing:0.08em; text-transform:uppercase; color:#1A1410 !important; text-decoration:none !important; opacity:1 !important; visibility:visible !important; }
+      #topnav ul li a:hover, #topnav ul li a.active { color:#FF6F61 !important; }
+      #topnav ul li a.cta { background:#FF6F61 !important; color:#ffffff !important; padding:0.55rem 1.4rem; border-radius:100px; }
+      #topnav ul li a.cta:hover { background:#E55A4D !important; }
+      #hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+      #hamburger span { display:block; width:24px; height:2px; background:#1A1410; border-radius:2px; }
+      #mobilenav { display:none; position:fixed; inset:0; background:#FFF5E9; z-index:10000; flex-direction:column; align-items:center; justify-content:center; gap:2rem; }
+      #mobilenav.open { display:flex !important; }
+      #mobilenav a { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:300; color:#1A1410 !important; text-decoration:none; }
+      #mobilenav a:hover { color:#FF6F61 !important; }
+      #mobilenav a.cta { font-family:'DM Sans',sans-serif; font-size:1rem; background:#FF6F61; color:#ffffff !important; padding:0.75rem 2.5rem; border-radius:100px; }
+      #closenav { position:absolute; top:1.5rem; right:1.5rem; background:none; border:none; font-size:1.5rem; cursor:pointer; color:#1A1410; }
+      @media (max-width: 900px) { #topnav { padding: 1rem 1.5rem; } #topnav ul { display: none !important; } #hamburger { display: flex !important; } #topnav a.logo { display: flex !important; } }
   </style>
 </head>
 <body>
-  <nav id="header-nav">
-    <a href="index.html" class="nav-logo"><span class="spark">✦</span> Outfitted</a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="founders.html">Founders</a></li>
-      <li><a href="product.html">Product</a></li>
+
+  <nav id="topnav">
+    <a href="index.html" class="logo"><span class="spark">&#x2736;</span> Outfitted</a>
+    <ul>
+      <li><a href="index.html" >Home</a></li>
+      <li><a href="founders.html" >Founders</a></li>
+      <li><a href="product.html" >Product</a></li>
       <li><a href="partners.html" class="active">Partners</a></li>
-      <li><a href="invest.html">Investors</a></li>
-      <li><a href="https://testflight.apple.com/join/uwkSrC3p" target="_blank" class="nav-cta">Try the App</a></li>
+      <li><a href="invest.html" >Investors</a></li>
+      <li><a href="https://testflight.apple.com/join/uwkSrC3p" target="_blank" class="cta">Try the App</a></li>
     </ul>
-    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button id="hamburger" onclick="document.getElementById('mobilenav').classList.add('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
-  <div class="mobile-overlay" id="mobileMenu">
-    <button class="mobile-overlay-close" aria-label="Close menu">&times;</button>
-    <a href="index.html">Home</a>
-    <a href="founders.html">Founders</a>
-    <a href="product.html">Product</a>
-    <a href="partners.html">Partners</a>
-    <a href="invest.html">Investors</a>
-    <a href="https://testflight.apple.com/join/uwkSrC3p" target="_blank" class="nav-cta">Try the App</a>
+  <div id="mobilenav">
+    <button id="closenav" onclick="document.getElementById('mobilenav').classList.remove('open')">&#x2715;</button>
+    <a href="index.html" onclick="document.getElementById('mobilenav').classList.remove('open')">Home</a>
+    <a href="founders.html" onclick="document.getElementById('mobilenav').classList.remove('open')">Founders</a>
+    <a href="product.html" onclick="document.getElementById('mobilenav').classList.remove('open')">Product</a>
+    <a href="partners.html" onclick="document.getElementById('mobilenav').classList.remove('open')">Partners</a>
+    <a href="invest.html" onclick="document.getElementById('mobilenav').classList.remove('open')">Investors</a>
+    <a href="https://testflight.apple.com/join/uwkSrC3p" target="_blank" class="cta">Try the App</a>
   </div>
 
-  <section class="hero">
+  <!-- MOBILE MENU --><section class="hero">
     <div class="hero-content">
       <div class="hero-eyebrow">Brand Partnerships · Affiliate Commerce</div>
       <h1>Reach shoppers at the<br/><em>moment of decision.</em></h1>
@@ -257,21 +265,12 @@
   <footer>
     <div class="footer-top">
       <div class="footer-logo"><span class="spark">✦</span> Outfitted</div>
-      <nav class="footer-nav"><a href="index.html">Home</a><a href="founders.html">Founders</a><a href="product.html">Product</a><a href="partners.html">Partners</a><a href="invest.html">Investors</a><a href="mailto:Outfittedai@outlook.com">Contact</a></nav>
+      <nav class="footer-links"><a href="index.html">Home</a><a href="founders.html">Founders</a><a href="product.html">Product</a><a href="partners.html">Partners</a><a href="invest.html">Investors</a><a href="mailto:Outfittedai@outlook.com">Contact</a></nav>
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 Outfitted AI LLC. Los Angeles, CA.</div>
       <div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
     </div>
   </footer>
-
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.querySelector('.mobile-overlay-close');
-    hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
-    closeBtn.addEventListener('click', () => mobileMenu.classList.remove('open'));
-    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
-  </script>
 </body>
 </html>
