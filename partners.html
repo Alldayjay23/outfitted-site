@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partner With Outfitted — Affiliate & Brand Partnerships</title>
+  <meta name="description" content="Partner with Outfitted — an AI fashion platform reaching style-conscious shoppers aged 18-35. Affiliate commerce, featured placements, and co-marketing opportunities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --coral: #FF6F61; --coral-dark: #E55A4D; --sage: #87A96B; --cream: #FFF5E9; --cream-dark: #F5EAD8; --ink: #1A1410; --ink-light: #7A6A60; --white: #FFFFFF; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 3rem; background: rgba(255,245,233,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,111,97,0.12); }
+    .nav-logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+    .spark { color: var(--coral); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--coral); }
+    .nav-cta { background: var(--coral) !important; color: var(--white) !important; padding: 0.55rem 1.4rem; border-radius: 100px; }
+    .hero { min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 9rem 2rem 5rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -10%; left: 50%; transform: translateX(-50%); width: 70vw; height: 70vw; background: radial-gradient(ellipse, rgba(255,111,97,0.07) 0%, transparent 65%); pointer-events: none; }
+    .hero-content { position: relative; z-index: 1; animation: fadeUp 0.9s ease both; max-width: 760px; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.75rem; justify-content: center; font-size: 0.73rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); margin-bottom: 1.5rem; }
+    .hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 28px; height: 1px; background: var(--coral); }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 5vw, 5.5rem); font-weight: 300; line-height: 1.05; color: var(--ink); margin-bottom: 1.5rem; }
+    h1 em { font-style: italic; color: var(--coral); }
+    .hero-sub { font-size: 1.05rem; font-weight: 300; line-height: 1.75; color: var(--ink-light); max-width: 560px; margin: 0 auto 2.5rem; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--coral); color: var(--white); padding: 0.85rem 2rem; border-radius: 100px; font-size: 0.88rem; font-weight: 500; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+    .btn-primary:hover { background: var(--coral-dark); transform: translateY(-1px); }
+    .btn-secondary { display: inline-flex; align-items: center; color: var(--ink); font-size: 0.88rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; transition: color 0.2s; }
+    .btn-secondary:hover { color: var(--coral); border-color: var(--coral); }
+    section { padding: 6rem 3rem; }
+    .section-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); margin-bottom: 1rem; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.8rem); font-weight: 300; line-height: 1.1; color: var(--ink); margin-bottom: 1.25rem; }
+    h2 em { font-style: italic; color: var(--coral); }
+    .section-sub { font-size: 1rem; font-weight: 300; line-height: 1.75; color: var(--ink-light); max-width: 560px; }
+    .audience { background: var(--ink); }
+    .audience h2 { color: var(--cream); }
+    .audience .section-eyebrow { color: #FF8F83; }
+    .audience-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; margin-top: 4rem; }
+    .aud-card { background: rgba(255,245,233,0.04); border: 1px solid rgba(255,245,233,0.08); border-radius: 16px; padding: 1.75rem; text-align: center; }
+    .aud-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 600; color: var(--coral); line-height: 1; margin-bottom: 0.4rem; }
+    .aud-label { font-size: 0.78rem; color: rgba(255,245,233,0.5); letter-spacing: 0.04em; }
+    .aud-bullets { margin-top: 3rem; display: grid; grid-template-columns: repeat(2,1fr); gap: 0.85rem; max-width: 640px; }
+    .aud-bullet { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.85rem; line-height: 1.6; color: rgba(255,245,233,0.6); }
+    .aud-bullet::before { content: '✦'; color: var(--coral); flex-shrink: 0; font-size: 0.6rem; margin-top: 0.3rem; }
+    .why-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; margin-top: 4rem; }
+    .why-card { background: var(--white); border-radius: 20px; padding: 2rem; border: 1px solid rgba(26,20,16,0.06); transition: transform 0.2s, box-shadow 0.2s; }
+    .why-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26,20,16,0.1); }
+    .why-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(255,111,97,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.25rem; }
+    .why-title { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--ink); margin-bottom: 0.6rem; }
+    .why-desc { font-size: 0.84rem; line-height: 1.7; color: var(--ink-light); }
+    .how { background: var(--cream-dark); }
+    .how-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 4rem; }
+    .step { text-align: center; padding: 2rem 1.5rem; background: var(--white); border-radius: 20px; border: 1px solid rgba(26,20,16,0.06); }
+    .step-num { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 600; color: rgba(255,111,97,0.15); line-height: 1; margin-bottom: 1rem; }
+    .step-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: 0.6rem; }
+    .step-desc { font-size: 0.84rem; line-height: 1.7; color: var(--ink-light); }
+    .types-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 4rem; }
+    .type-card { border-radius: 20px; padding: 2rem; border: 1px solid rgba(26,20,16,0.08); transition: border-color 0.2s, transform 0.2s; }
+    .type-card:hover { border-color: var(--coral); transform: translateY(-3px); }
+    .type-card.featured { background: var(--ink); border-color: transparent; }
+    .type-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.75rem; }
+    .type-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--ink); margin-bottom: 1rem; }
+    .type-card.featured .type-title { color: var(--cream); }
+    .type-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .type-list li { font-size: 0.84rem; line-height: 1.6; color: var(--ink-light); display: flex; align-items: flex-start; gap: 0.6rem; }
+    .type-card.featured .type-list li { color: rgba(255,245,233,0.6); }
+    .type-list li::before { content: '—'; color: var(--coral); flex-shrink: 0; }
+    .brands { background: var(--cream-dark); text-align: center; }
+    .brands-row { display: flex; flex-wrap: wrap; gap: 0.85rem; justify-content: center; margin-top: 3rem; }
+    .brand-pill { background: var(--white); border: 1px solid rgba(26,20,16,0.08); border-radius: 100px; padding: 0.55rem 1.3rem; font-size: 0.8rem; font-weight: 500; color: var(--ink-light); }
+    .cta-section { text-align: center; padding: 8rem 3rem; position: relative; overflow: hidden; }
+    .cta-section::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 600px; background: radial-gradient(ellipse, rgba(255,111,97,0.09) 0%, transparent 70%); pointer-events: none; }
+    .cta-section h2 { max-width: 600px; margin: 0 auto 1.5rem; }
+    .cta-section .section-sub { margin: 0 auto 2.5rem; text-align: center; }
+    .contact-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; max-width: 520px; margin: 0 auto 2.5rem; }
+    .contact-item { background: var(--white); border-radius: 14px; padding: 1.5rem; border: 1px solid rgba(26,20,16,0.06); }
+    .contact-role { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.4rem; }
+    .contact-name { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: 0.2rem; }
+    .contact-detail { font-size: 0.8rem; color: var(--ink-light); }
+    .cta-buttons { display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+    footer { background: var(--ink); padding: 2.5rem 3rem; border-top: 1px solid rgba(255,245,233,0.06); }
+    .footer-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--cream); }
+    .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-nav a { font-size: 0.75rem; color: rgba(255,245,233,0.4); text-decoration: none; transition: color 0.2s; letter-spacing: 0.06em; text-transform: uppercase; }
+    .footer-nav a:hover { color: var(--coral); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,245,233,0.06); }
+    .footer-copy { font-size: 0.75rem; color: rgba(255,245,233,0.25); }
+    .footer-legal { display: flex; gap: 1.5rem; }
+    .footer-legal a { font-size: 0.72rem; color: rgba(255,245,233,0.3); text-decoration: none; }
+    .footer-legal a:hover { color: var(--coral); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; } .nav-links { display: none; } section { padding: 4rem 1.5rem; } .hero { padding: 7rem 1.5rem 3rem; }
+      .audience-grid { grid-template-columns: repeat(2,1fr); } .aud-bullets { grid-template-columns: 1fr; }
+      .why-grid, .types-grid { grid-template-columns: 1fr; } .how-steps { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; } footer { padding: 2rem 1.5rem; }
+      .footer-top, .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><span class="spark">✦</span> Outfitted</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="founders.html">Founders</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="partners.html" class="active">Partners</a></li>
+      <li><a href="invest.html">Investors</a></li>
+      <li><a href="https://testflight.apple.com/join/uwkSrC3p" target="_blank" class="nav-cta">Try the App</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Brand Partnerships · Affiliate Commerce</div>
+      <h1>Reach shoppers at the<br/><em>moment of decision.</em></h1>
+      <p class="hero-sub">Outfitted is an AI-powered fashion platform where users actively build outfits and discover new pieces. Your products surface natively — at the exact moment a user is deciding what to wear and what to buy next.</p>
+      <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+        <a href="mailto:Outfittedai@outlook.com" class="btn-primary">Start a Partnership →</a>
+        <a href="#how" class="btn-secondary">See how it works</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="audience">
+    <div class="section-eyebrow">Our Audience</div>
+    <h2>Style-driven consumers<br/>with <em>purchase intent.</em></h2>
+    <p class="section-sub" style="color:rgba(255,245,233,0.6)">Outfitted users come to the platform with one goal — to look good and shop smart. They're not browsing passively. They're actively building outfits and making buying decisions.</p>
+    <div class="audience-grid">
+      <div class="aud-card"><div class="aud-num">18–35</div><div class="aud-label">Core Age Range</div></div>
+      <div class="aud-card"><div class="aud-num">82%</div><div class="aud-label">Fashion-Forward</div></div>
+      <div class="aud-card"><div class="aud-num">High</div><div class="aud-label">Purchase Intent</div></div>
+      <div class="aud-card"><div class="aud-num">Mobile</div><div class="aud-label">First Shoppers</div></div>
+    </div>
+    <div class="aud-bullets" style="margin-top:3rem;">
+      <div class="aud-bullet">Fashion-forward women and men aged 18–35</div>
+      <div class="aud-bullet">Gen Z & Millennials with disposable income</div>
+      <div class="aud-bullet">Style-conscious, social-media-active consumers</div>
+      <div class="aud-bullet">High engagement with trend-led contemporary brands</div>
+      <div class="aud-bullet">Active shoppers building real wardrobes, not just browsing</div>
+      <div class="aud-bullet">Users arrive with intent — to outfit themselves, not scroll</div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="section-eyebrow">Why Partner</div>
+    <h2>A different kind of<br/><em>brand channel.</em></h2>
+    <p class="section-sub">Unlike traditional advertising, Outfitted integrates your products into the styling journey itself — making every placement feel like a natural recommendation, not an ad.</p>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon">🎯</div><div class="why-title">High-Intent Shopping Environment</div><div class="why-desc">Users interact with your brand while actively styling outfits — leading to stronger purchase intent and higher-quality traffic than passive social media discovery.</div></div>
+      <div class="why-card"><div class="why-icon">✦</div><div class="why-title">Native Brand Integration</div><div class="why-desc">Your products are embedded directly into AI outfit recommendations, virtual try-ons, and curated looks — never disruptive, always relevant.</div></div>
+      <div class="why-card"><div class="why-icon">📊</div><div class="why-title">Performance-Based Model</div><div class="why-desc">We drive net-new traffic and conversions through affiliate links with full attribution. Commission-based means you only pay for results.</div></div>
+      <div class="why-card"><div class="why-icon">👗</div><div class="why-title">Virtual Try-On Discovery</div><div class="why-desc">Users can virtually try on your products before buying — increasing purchase confidence and driving higher conversion rates for partner brands.</div></div>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="section-eyebrow">How It Works</div>
+    <h2>Simple integration,<br/><em>real results.</em></h2>
+    <p class="section-sub">Getting your brand onto Outfitted is straightforward. We handle the integration — you focus on conversions.</p>
+    <div class="how-steps">
+      <div class="step"><div class="step-num">01</div><div class="step-title">Apply to Partner</div><div class="step-desc">Reach out via email or through your affiliate network. We review all applications and respond within 3 business days with options tailored to your brand.</div></div>
+      <div class="step"><div class="step-num">02</div><div class="step-title">Get Integrated</div><div class="step-desc">Your products are added to our curated shop feed and styled into AI outfit suggestions. Affiliate links are tracked end-to-end with full attribution.</div></div>
+      <div class="step"><div class="step-num">03</div><div class="step-title">Earn on Conversions</div><div class="step-desc">Every click and purchase is tracked and attributed. Commission-based model means our incentives are fully aligned with your sales outcomes.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-eyebrow">Partnership Options</div>
+    <h2>Choose how you<br/><em>want to show up.</em></h2>
+    <p class="section-sub">From affiliate links to full brand integrations, we offer flexible structures that fit any brand's goals.</p>
+    <div class="types-grid">
+      <div class="type-card">
+        <div class="type-label">Affiliate</div>
+        <div class="type-title">Affiliate Commerce</div>
+        <ul class="type-list">
+          <li>Deep-linked product recommendations in the app</li>
+          <li>Commission-based performance model</li>
+          <li>Trackable sales and full attribution</li>
+          <li>No upfront cost — pay on results only</li>
+        </ul>
+      </div>
+      <div class="type-card featured">
+        <div class="type-label">Featured</div>
+        <div class="type-title">Featured Placement</div>
+        <ul class="type-list">
+          <li>Priority position in AI styling flows</li>
+          <li>Seasonal and trend-based edits</li>
+          <li>Capsule and collection spotlights</li>
+          <li>Top of shop feed placement</li>
+        </ul>
+      </div>
+      <div class="type-card">
+        <div class="type-label">Co-Marketing</div>
+        <div class="type-title">Co-Marketing & Content</div>
+        <ul class="type-list">
+          <li>Branded outfit edits featuring your collection</li>
+          <li>Social and in-app content collaborations</li>
+          <li>Creator-driven activations</li>
+          <li>Co-branded campaign opportunities</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="brands">
+    <div class="section-eyebrow">Fashion Ecosystem</div>
+    <h2>Built for fashion brands<br/>of <em>every scale.</em></h2>
+    <p class="section-sub" style="margin:0 auto;text-align:center;">From global retailers to emerging labels — Outfitted works with brands across the full fashion spectrum.</p>
+    <div class="brands-row">
+      <div class="brand-pill">Contemporary Fashion</div><div class="brand-pill">Streetwear</div><div class="brand-pill">Athleisure</div>
+      <div class="brand-pill">Luxury Basics</div><div class="brand-pill">Fast Fashion</div><div class="brand-pill">Footwear</div>
+      <div class="brand-pill">Accessories</div><div class="brand-pill">Denim</div><div class="brand-pill">Workwear</div>
+      <div class="brand-pill">Occasion Wear</div><div class="brand-pill">Sustainable Brands</div><div class="brand-pill">Emerging Designers</div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="section-eyebrow">Get Started</div>
+    <h2>Ready to reach<br/><em>fashion-forward</em> shoppers?</h2>
+    <p class="section-sub">We'd love to explore how Outfitted can support your brand's growth through authentic, high-intent product discovery.</p>
+    <div class="contact-grid">
+      <div class="contact-item"><div class="contact-role">CEO & Founder</div><div class="contact-name">Johnathan Joseph</div><div class="contact-detail">Outfittedai@outlook.com</div></div>
+      <div class="contact-item"><div class="contact-role">Co-Founder, Growth & Brand</div><div class="contact-name">Tiffany Brown</div><div class="contact-detail">Outfittedai@outlook.com</div></div>
+    </div>
+    <div class="cta-buttons">
+      <a href="mailto:Outfittedai@outlook.com" class="btn-primary">Start a Partnership →</a>
+      <a href="founders.html" class="btn-secondary">Meet the team</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-logo"><span class="spark">✦</span> Outfitted</div>
+      <nav class="footer-nav"><a href="index.html">Home</a><a href="founders.html">Founders</a><a href="product.html">Product</a><a href="partners.html">Partners</a><a href="invest.html">Investors</a><a href="mailto:Outfittedai@outlook.com">Contact</a></nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Outfitted AI LLC. Los Angeles, CA.</div>
+      <div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+    </div>
+  </footer>
+</body>
+</html>
