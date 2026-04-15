@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet the Founders — Outfitted AI</title>
+  <meta name="description" content="Outfitted was built by Johnathan Joseph (USC Marshall) and Tiffany Brown (professional fashion stylist) — combining AI infrastructure with real styling expertise." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --coral: #FF6F61; --coral-dark: #E55A4D; --sage: #87A96B; --cream: #FFF5E9; --cream-dark: #F5EAD8; --ink: #1A1410; --ink-light: #7A6A60; --white: #FFFFFF; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 3rem; background: #FFF5E9; border-bottom: 1px solid rgba(26,20,16,0.15); border-bottom: 1px solid rgba(255,111,97,0.12); }
+    .nav-logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+    .spark { color: var(--coral); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #1A1410 !important; text-decoration: none; transition: color 0.2s; font-weight: 600; }
+    .nav-links a:hover, .nav-links a.active { color: var(--coral); }
+    .nav-cta { background: var(--coral) !important; color: var(--white) !important; padding: 0.55rem 1.4rem; border-radius: 100px; }
+    .hero { min-height: 55vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 9rem 2rem 5rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -10%; left: 50%; transform: translateX(-50%); width: 70vw; height: 70vw; background: radial-gradient(ellipse, rgba(255,111,97,0.07) 0%, transparent 65%); pointer-events: none; }
+    .hero-content { position: relative; z-index: 1; animation: fadeUp 0.9s ease both; max-width: 680px; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.75rem; justify-content: center; font-size: 0.73rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); margin-bottom: 1.5rem; }
+    .hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 28px; height: 1px; background: var(--coral); }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 5vw, 5.5rem); font-weight: 300; line-height: 1.05; color: var(--ink); margin-bottom: 1.5rem; }
+    h1 em { font-style: italic; color: var(--coral); }
+    .hero-sub { font-size: 1.05rem; font-weight: 300; line-height: 1.75; color: var(--ink-light); max-width: 520px; margin: 0 auto; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--coral); color: var(--white); padding: 0.85rem 2rem; border-radius: 100px; font-size: 0.88rem; font-weight: 500; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+    .btn-primary:hover { background: var(--coral-dark); transform: translateY(-1px); }
+    .btn-secondary { display: inline-flex; align-items: center; color: var(--ink); font-size: 0.88rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; transition: color 0.2s; }
+    .btn-secondary:hover { color: var(--coral); border-color: var(--coral); }
+    section { padding: 6rem 3rem; }
+    .section-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); margin-bottom: 1rem; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.8rem); font-weight: 300; line-height: 1.1; color: var(--ink); margin-bottom: 1.25rem; }
+    h2 em { font-style: italic; color: var(--coral); }
+    .section-sub { font-size: 1rem; font-weight: 300; line-height: 1.75; color: var(--ink-light); max-width: 560px; }
+    .founders { background: var(--ink); }
+    .founders h2 { color: var(--cream); }
+    .founders .section-eyebrow { color: #FF8F83; }
+    .founder-profile { display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: start; margin-top: 5rem; padding-bottom: 5rem; border-bottom: 1px solid rgba(255,245,233,0.08); }
+    .founder-profile:last-child { border-bottom: none; padding-bottom: 0; }
+    .founder-left { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .founder-avatar { width: 160px; height: 160px; border-radius: 50%; overflow: hidden; margin-bottom: 1.5rem; box-shadow: 0 0 0 4px rgba(255,111,97,0.2), 0 0 0 8px rgba(255,111,97,0.08); flex-shrink: 0; }
+    .founder-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .founder-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--cream); margin-bottom: 0.3rem; }
+    .founder-title { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral); }
+    .founder-bio { font-size: 0.92rem; line-height: 1.85; color: rgba(255,245,233,0.65); margin-bottom: 2rem; }
+    .founder-bio p { margin-bottom: 1rem; }
+    .founder-bio p:last-child { margin-bottom: 0; }
+    .credentials { display: flex; flex-direction: column; gap: 0.85rem; }
+    .cred { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.25rem; background: rgba(255,245,233,0.04); border: 1px solid rgba(255,245,233,0.08); border-radius: 12px; }
+    .cred-icon { font-size: 1.1rem; min-width: 24px; margin-top: 0.1rem; }
+    .cred-text { font-size: 0.84rem; line-height: 1.6; color: rgba(255,245,233,0.6); }
+    .cred-text strong { display: block; font-size: 0.88rem; color: var(--cream); margin-bottom: 0.2rem; font-weight: 500; }
+    .styling { background: var(--cream-dark); }
+    .styling-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 4rem; }
+    .sty-card { background: var(--white); border-radius: 20px; padding: 2rem; border: 1px solid rgba(26,20,16,0.06); transition: transform 0.2s, box-shadow 0.2s; }
+    .sty-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26,20,16,0.1); }
+    .sty-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(135,169,107,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.25rem; }
+    .sty-title { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--ink); margin-bottom: 0.6rem; }
+    .sty-desc { font-size: 0.84rem; line-height: 1.7; color: var(--ink-light); }
+    .cta-section { text-align: center; padding: 8rem 3rem; position: relative; overflow: hidden; }
+    .cta-section::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 600px; background: radial-gradient(ellipse, rgba(255,111,97,0.09) 0%, transparent 70%); pointer-events: none; }
+    .cta-section h2 { max-width: 600px; margin: 0 auto 1.5rem; }
+    .cta-section .section-sub { margin: 0 auto 2.5rem; text-align: center; }
+    .cta-buttons { display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+    footer { background: var(--ink); padding: 2.5rem 3rem; border-top: 1px solid rgba(255,245,233,0.06); }
+    .footer-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--cream); }
+    .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-nav a { font-size: 0.75rem; color: rgba(255,245,233,0.4); text-decoration: none; transition: color 0.2s; letter-spacing: 0.06em; text-transform: uppercase; }
+    .footer-nav a:hover { color: var(--coral); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,245,233,0.06); }
+    .footer-copy { font-size: 0.75rem; color: rgba(255,245,233,0.25); }
+    .footer-legal { display: flex; gap: 1.5rem; }
+    .footer-legal a { font-size: 0.72rem; color: rgba(255,245,233,0.3); text-decoration: none; }
+    .footer-legal a:hover { color: var(--coral); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; } .nav-links { display: none; } section { padding: 4rem 1.5rem; } .hero { padding: 7rem 1.5rem 3rem; }
+      .founder-profile { grid-template-columns: 1fr; gap: 2.5rem; }
+      .styling-grid { grid-template-columns: 1fr; } footer { padding: 2rem 1.5rem; }
+      .footer-top, .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><span class="spark">✦</span> Outfitted</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="founders.html" class="active">Founders</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="partners.html">Partners</a></li>
+      <li><a href="invest.html">Investors</a></li>
+      <li><a href="https://testflight.apple.com/join/uwkSrC3p" target="_blank" class="nav-cta">Try the App</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">The Team Behind Outfitted</div>
+      <h1>Fashion expertise<br/>meets <em>AI execution.</em></h1>
+      <p class="hero-sub">Built by two people who saw the same problem from opposite ends — one building AI systems, one styling real people for a living.</p>
+    </div>
+  </section>
+
+  <section class="founders">
+    <div class="section-eyebrow">The Founders</div>
+    <h2>Built by people who<br/><em>live this problem.</em></h2>
+
+    <div class="founder-profile">
+      <div class="founder-left">
+        <div class="founder-avatar"><img src="jj-headshot.png" alt="Johnathan Joseph, Founder & CEO of Outfitted" /></div>
+        <div class="founder-name">Johnathan Joseph</div>
+        <div class="founder-title">Founder & CEO</div>
+      </div>
+      <div>
+        <div class="founder-bio">
+          <p>Johnathan Joseph is the founder and CEO of Outfitted AI LLC. He built Outfitted from zero to a functioning iOS app in under six months using an AI-leveraged development model — with autonomous agents handling operations while he operates at the CEO level.</p>
+          <p>Holding an MS in Entrepreneurship & Innovation from USC Marshall, JJ brings a background spanning corporate finance, technology process improvement, and AI systems design. His core thesis: the next generation of companies will be built by founders who operate as architects of AI workforces, not managers of human ones.</p>
+          <p>Outfitted placed 2nd at the USC Marshall HTA AI Product Challenge in April 2026.</p>
+        </div>
+        <div class="credentials">
+          <div class="cred"><div class="cred-icon">🎓</div><div class="cred-text"><strong>USC Marshall School of Business</strong>MS in Entrepreneurship & Innovation — focused on AI-leveraged venture creation and technology commercialization.</div></div>
+          <div class="cred"><div class="cred-icon">🤖</div><div class="cred-text"><strong>AI-First Builder</strong>Built Outfitted v1–v6 in under 6 months using Claude, GPT-4o, and a 6-agent autonomous Discord workforce. Zero engineering headcount.</div></div>
+          <div class="cred"><div class="cred-icon">🏆</div><div class="cred-text"><strong>USC Marshall Tech Fest — 2nd Place</strong>Selected as finalist and placed 2nd at the USC Marshall HTA AI Product Challenge, April 2026.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-profile">
+      <div class="founder-left">
+        <div class="founder-avatar"><img src="tiffany-headshot.png" alt="Tiffany Brown, Co-Founder of Outfitted" /></div>
+        <div class="founder-name">Tiffany Brown</div>
+        <div class="founder-title">Co-Founder · Growth & Style</div>
+      </div>
+      <div>
+        <div class="founder-bio">
+          <p>Tiffany Brown is the co-founder of Outfitted and the creative intelligence behind the platform's styling engine. A former professional fashion stylist with deep brand relationships across the industry, Tiffany brings the real-world expertise that makes Outfitted's AI recommendations feel human — not algorithmic.</p>
+          <p>Her professional styling career spans work with major fashion brands including Fabletics. She leads Outfitted's growth strategy, brand partnerships, and social media — and is the direct source of the styling intelligence that powers the AI outfit engine.</p>
+          <p>Tiffany's philosophy: great style is about confidence first, fashion second. That belief is encoded into every outfit suggestion Outfitted generates.</p>
+        </div>
+        <div class="credentials">
+          <div class="cred"><div class="cred-icon">✂️</div><div class="cred-text"><strong>Professional Fashion Stylist</strong>Former stylist for Fabletics and other major fashion brands — with hands-on experience translating trend forecasting into wearable looks for real clients.</div></div>
+          <div class="cred"><div class="cred-icon">🧠</div><div class="cred-text"><strong>Outfitted's Styling Intelligence</strong>Author of Outfitted's proprietary styling knowledge base — body type rules, occasion logic, color theory, and trend filtering injected directly into the AI engine.</div></div>
+          <div class="cred"><div class="cred-icon">📈</div><div class="cred-text"><strong>Growth & Brand Partnerships</strong>Leads all brand outreach, affiliate applications, influencer relationships, and social media strategy for Outfitted's go-to-market.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="styling">
+    <div class="section-eyebrow">Styling Intelligence</div>
+    <h2>The expertise behind<br/><em>every outfit.</em></h2>
+    <p class="section-sub">Tiffany's professional styling knowledge isn't just brand credibility — it's literally encoded into the AI. Every outfit Outfitted generates runs through her rules.</p>
+    <div class="styling-grid">
+      <div class="sty-card"><div class="sty-icon">📐</div><div class="sty-title">Body Type Intelligence</div><div class="sty-desc">Specific IF/THEN rules for petite, tall, pear, hourglass, rectangle, and inverted triangle body types — ensuring every suggestion actually flatters the person wearing it.</div></div>
+      <div class="sty-card"><div class="sty-icon">🎨</div><div class="sty-title">Color & Fabric Theory</div><div class="sty-desc">Safe pairings, contrast vs. monochrome guidance, fabric mixing rules, and seasonal color logic — the same principles Tiffany applies to real client styling sessions.</div></div>
+      <div class="sty-card"><div class="sty-icon">📅</div><div class="sty-title">Occasion-Based Rules</div><div class="sty-desc">Detailed logic for casual, work, date night, events, and travel — including silhouette guidance, shoe pairings, and accessory elevation per occasion.</div></div>
+      <div class="sty-card"><div class="sty-icon">✦</div><div class="sty-title">Trend Filtering</div><div class="sty-desc">Rules for when to adopt a trend vs. adapt it — including how to integrate trends subtly into an existing personal style without looking costume-like.</div></div>
+      <div class="sty-card"><div class="sty-icon">🗣️</div><div class="sty-title">Stylist Voice & Tone</div><div class="sty-desc">Outfitted's AI doesn't sound like a chatbot. It sounds like Tiffany — encouraging, direct, and fashion-fluent. "You're outfitted." is a compliment, not a system message.</div></div>
+      <div class="sty-card"><div class="sty-icon">🔄</div><div class="sty-title">Updated Weekly</div><div class="sty-desc">Tiffany's styling knowledge base is a living document — updated weekly with new trends, user feedback, and evolving style rules as the platform grows.</div></div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="section-eyebrow">Work With Us</div>
+    <h2>Ready to be part of<br/><em>what comes next?</em></h2>
+    <p class="section-sub">Whether you're a brand, an investor, or someone who wants to test the app — we'd love to connect.</p>
+    <div class="cta-buttons">
+      <a href="mailto:Outfittedai@outlook.com" class="btn-primary">Get in Touch →</a>
+      <a href="partners.html" class="btn-secondary">Partner with us</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-logo"><span class="spark">✦</span> Outfitted</div>
+      <nav class="footer-nav"><a href="index.html">Home</a><a href="founders.html">Founders</a><a href="product.html">Product</a><a href="partners.html">Partners</a><a href="invest.html">Investors</a><a href="mailto:Outfittedai@outlook.com">Contact</a></nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Outfitted AI LLC. Los Angeles, CA.</div>
+      <div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+    </div>
+  </footer>
+</body>
+</html>

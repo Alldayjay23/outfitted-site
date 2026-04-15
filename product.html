@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outfitted Products — The Reset Bin & Merch</title>
+  <meta name="description" content="Shop Outfitted branded merchandise and discover The Reset Bin — a premium smart wardrobe organizer with Rewear, Wash Soon, and Delicates compartments." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --coral: #FF6F61; --coral-dark: #E55A4D; --sage: #87A96B; --cream: #FFF5E9; --cream-dark: #F5EAD8; --ink: #1A1410; --ink-light: #7A6A60; --white: #FFFFFF; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 3rem; background: #FFF5E9; border-bottom: 1px solid rgba(26,20,16,0.15); border-bottom: 1px solid rgba(255,111,97,0.12); }
+    .nav-logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+    .spark { color: var(--coral); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #1A1410 !important; text-decoration: none; transition: color 0.2s; font-weight: 600; }
+    .nav-links a:hover, .nav-links a.active { color: var(--coral); }
+    .nav-cta { background: var(--coral) !important; color: var(--white) !important; padding: 0.55rem 1.4rem; border-radius: 100px; }
+    .hero { min-height: 55vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 9rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -10%; left: 50%; transform: translateX(-50%); width: 70vw; height: 70vw; background: radial-gradient(ellipse, rgba(255,111,97,0.07) 0%, transparent 65%); pointer-events: none; }
+    .hero-content { position: relative; z-index: 1; animation: fadeUp 0.9s ease both; max-width: 680px; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.75rem; justify-content: center; font-size: 0.73rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); margin-bottom: 1.5rem; }
+    .hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 28px; height: 1px; background: var(--coral); }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 5vw, 5.5rem); font-weight: 300; line-height: 1.05; color: var(--ink); margin-bottom: 1.5rem; }
+    h1 em { font-style: italic; color: var(--coral); }
+    .hero-sub { font-size: 1.05rem; font-weight: 300; line-height: 1.75; color: var(--ink-light); max-width: 520px; margin: 0 auto 2.5rem; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--coral); color: var(--white); padding: 0.85rem 2rem; border-radius: 100px; font-size: 0.88rem; font-weight: 500; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+    .btn-primary:hover { background: var(--coral-dark); transform: translateY(-1px); }
+    .btn-outline { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--coral); border: 1.5px solid var(--coral); padding: 0.8rem 2rem; border-radius: 100px; font-size: 0.88rem; font-weight: 500; text-decoration: none; transition: all 0.2s; }
+    .btn-outline:hover { background: var(--coral); color: var(--white); }
+    .btn-secondary { display: inline-flex; align-items: center; color: var(--ink); font-size: 0.88rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; transition: color 0.2s; }
+    .btn-secondary:hover { color: var(--coral); border-color: var(--coral); }
+    section { padding: 6rem 3rem; }
+    .section-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); margin-bottom: 1rem; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.8rem); font-weight: 300; line-height: 1.1; color: var(--ink); margin-bottom: 1.25rem; }
+    h2 em { font-style: italic; color: var(--coral); }
+    .section-sub { font-size: 1rem; font-weight: 300; line-height: 1.75; color: var(--ink-light); max-width: 560px; }
+
+    /* MERCH */
+    .merch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; }
+    .merch-card { background: var(--white); border-radius: 20px; overflow: hidden; border: 1px solid rgba(26,20,16,0.06); transition: transform 0.2s, box-shadow 0.2s; }
+    .merch-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26,20,16,0.1); }
+    .merch-img { height: 260px; display: flex; align-items: center; justify-content: center; position: relative; }
+    .merch-img.bone { background: linear-gradient(145deg, #F5F0E8, #E8E0D0); }
+    .merch-img.black-bg { background: linear-gradient(145deg, #2A2018, #1A1410); }
+    .merch-img.cream-bg { background: linear-gradient(145deg, #FFF5E9, #F5EAD8); }
+    .merch-placeholder { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+    .merch-garment { font-size: 4rem; }
+    .merch-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; opacity: 0.4; }
+    .photo-note { position: absolute; bottom: 1rem; right: 1rem; background: rgba(255,111,97,0.1); border: 1px dashed var(--coral); border-radius: 8px; padding: 0.35rem 0.7rem; font-size: 0.62rem; color: var(--coral); text-transform: uppercase; letter-spacing: 0.06em; }
+    .merch-body { padding: 1.5rem; }
+    .merch-tag { display: inline-block; background: rgba(135,169,107,0.15); color: var(--sage); font-size: 0.65rem; font-weight: 500; padding: 0.2rem 0.6rem; border-radius: 100px; margin-bottom: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; }
+    .merch-tag.soon { background: rgba(255,111,97,0.1); color: var(--coral); }
+    .merch-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: 0.3rem; }
+    .merch-detail { font-size: 0.8rem; color: var(--ink-light); margin-bottom: 0.75rem; line-height: 1.5; }
+    .merch-price { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--coral); margin-bottom: 1rem; }
+    .merch-btn { display: block; text-align: center; background: var(--ink); color: var(--white); padding: 0.75rem; border-radius: 100px; font-size: 0.82rem; font-weight: 500; text-decoration: none; transition: background 0.2s; }
+    .merch-btn:hover { background: var(--coral); }
+    .merch-btn.disabled { background: rgba(26,20,16,0.06); color: var(--ink-light); cursor: default; }
+    .merch-channels { margin-top: 3rem; text-align: center; }
+    .merch-channels p { font-size: 0.84rem; color: var(--ink-light); margin-bottom: 1.25rem; }
+    .channel-pills { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+    .channel-pill { background: var(--white); border: 1px solid rgba(26,20,16,0.08); border-radius: 100px; padding: 0.5rem 1.2rem; font-size: 0.8rem; font-weight: 500; color: var(--ink-light); }
+
+    /* RESET BIN */
+    .reset-bin { background: var(--cream-dark); }
+    .reset-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-top: 4rem; }
+    .reset-img { border-radius: 24px; overflow: hidden; background: var(--white); box-shadow: 0 40px 80px rgba(26,20,16,0.12); }
+    .reset-img img { width: 100%; height: auto; display: block; }
+    .reset-copy h3 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1.15; color: var(--ink); margin-bottom: 1.25rem; }
+    .reset-copy h3 em { font-style: italic; color: var(--coral); }
+    .reset-copy p { font-size: 0.92rem; line-height: 1.8; color: var(--ink-light); margin-bottom: 1.25rem; }
+    .coming-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(135,169,107,0.12); color: var(--sage); font-size: 0.72rem; font-weight: 500; padding: 0.3rem 0.85rem; border-radius: 100px; margin-bottom: 1rem; }
+    .compartments { display: flex; gap: 0.75rem; margin: 2rem 0; }
+    .comp { flex: 1; background: var(--white); border-radius: 12px; padding: 1rem; border: 1px solid rgba(26,20,16,0.08); text-align: center; }
+    .comp-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.3rem; }
+    .comp-desc { font-size: 0.72rem; color: var(--ink-light); line-height: 1.4; }
+    .reset-features { display: grid; grid-template-columns: repeat(2,1fr); gap: 0.6rem; margin: 1.5rem 0; }
+    .rf { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: var(--ink-light); }
+    .rf::before { content: '✦'; color: var(--coral); font-size: 0.55rem; }
+    .specs { display: grid; grid-template-columns: repeat(2,1fr); gap: 0.75rem; margin-top: 2rem; }
+    .spec { background: var(--white); border-radius: 12px; padding: 1.25rem; border: 1px solid rgba(26,20,16,0.06); }
+    .spec-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.3rem; }
+    .spec-val { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--ink); }
+
+    /* SMART */
+    .smart { background: var(--ink); }
+    .smart h2 { color: var(--cream); }
+    .smart .section-eyebrow { color: #FF8F83; }
+    .smart-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 4rem; }
+    .smart-card { background: rgba(255,245,233,0.04); border: 1px solid rgba(255,245,233,0.08); border-radius: 20px; padding: 2rem; transition: border-color 0.2s; }
+    .smart-card:hover { border-color: rgba(255,111,97,0.3); }
+    .smart-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .smart-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--cream); margin-bottom: 0.6rem; }
+    .smart-desc { font-size: 0.84rem; line-height: 1.7; color: rgba(255,245,233,0.55); }
+    .p2-badge { display: inline-block; margin-top: 0.75rem; background: rgba(255,111,97,0.15); color: var(--coral); font-size: 0.68rem; font-weight: 500; padding: 0.2rem 0.6rem; border-radius: 100px; }
+
+    /* WAITLIST */
+    .waitlist { text-align: center; padding: 6rem 3rem; background: var(--ink); }
+    .waitlist h2 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(2rem,4vw,3rem); color: var(--cream); max-width: 480px; margin: 0 auto 1rem; }
+    .waitlist p { color: rgba(255,245,233,0.55); font-size: 0.9rem; max-width: 380px; margin: 0 auto 2rem; line-height: 1.7; }
+
+    footer { background: var(--ink); padding: 2.5rem 3rem; border-top: 1px solid rgba(255,245,233,0.06); }
+    .footer-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--cream); }
+    .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-nav a { font-size: 0.75rem; color: rgba(255,245,233,0.4); text-decoration: none; transition: color 0.2s; letter-spacing: 0.06em; text-transform: uppercase; }
+    .footer-nav a:hover { color: var(--coral); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,245,233,0.06); }
+    .footer-copy { font-size: 0.75rem; color: rgba(255,245,233,0.25); }
+    .footer-legal { display: flex; gap: 1.5rem; }
+    .footer-legal a { font-size: 0.72rem; color: rgba(255,245,233,0.3); text-decoration: none; }
+    .footer-legal a:hover { color: var(--coral); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; } .nav-links { display: none; } section { padding: 4rem 1.5rem; } .hero { padding: 7rem 1.5rem 3rem; }
+      .merch-grid, .smart-grid { grid-template-columns: 1fr; }
+      .reset-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .reset-features, .specs { grid-template-columns: 1fr 1fr; }
+      footer { padding: 2rem 1.5rem; } .footer-top, .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><span class="spark">✦</span> Outfitted</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="founders.html">Founders</a></li>
+      <li><a href="product.html" class="active">Product</a></li>
+      <li><a href="partners.html">Partners</a></li>
+      <li><a href="invest.html">Investors</a></li>
+      <li><a href="https://testflight.apple.com/join/uwkSrC3p" target="_blank" class="nav-cta">Try the App</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Physical Products</div>
+      <h1>Style beyond<br/>the <em>screen.</em></h1>
+      <p class="hero-sub">Outfitted extends from your phone to your wardrobe. Branded essentials you'll actually wear and a premium organizer designed to transform how you interact with your closet every day.</p>
+      <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+        <a href="#merch" class="btn-primary">Shop Merch →</a>
+        <a href="#reset" class="btn-secondary">The Reset Bin</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MERCH -->
+  <section id="merch">
+    <div class="section-eyebrow">Outfitted Merch</div>
+    <h2>Wear the<br/><em>brand.</em></h2>
+    <p class="section-sub">Premium embroidered essentials. The "Outfitted." logo — centered, clean, understated. Pieces designed to live in your actual rotation.</p>
+    <div class="merch-grid">
+      <div class="merch-card">
+        <div class="merch-img bone">
+          <div class="merch-placeholder">
+            <div class="merch-garment">👕</div>
+            <div class="merch-logo-text">Outfitted.</div>
+          </div>
+          <div class="photo-note">Photo coming soon</div>
+        </div>
+        <div class="merch-body">
+          <div class="merch-tag">New</div>
+          <div class="merch-name">Classic Tee — Bone</div>
+          <div class="merch-detail">Premium cotton. Centered "Outfitted." embroidery. Relaxed fit. Sizes XS–3XL.</div>
+          <div class="merch-price">$45</div>
+          <a href="mailto:Outfittedai@outlook.com?subject=Merch Order — Classic Tee Bone" class="merch-btn">Order Now →</a>
+        </div>
+      </div>
+      <div class="merch-card">
+        <div class="merch-img black-bg">
+          <div class="merch-placeholder">
+            <div class="merch-garment">👕</div>
+            <div class="merch-logo-text" style="color:rgba(255,245,233,0.3)">Outfitted.</div>
+          </div>
+          <div class="photo-note">Photo coming soon</div>
+        </div>
+        <div class="merch-body">
+          <div class="merch-tag">New</div>
+          <div class="merch-name">Classic Tee — Black</div>
+          <div class="merch-detail">Premium cotton. Centered "Outfitted." embroidery. Relaxed fit. Sizes XS–3XL.</div>
+          <div class="merch-price">$45</div>
+          <a href="mailto:Outfittedai@outlook.com?subject=Merch Order — Classic Tee Black" class="merch-btn">Order Now →</a>
+        </div>
+      </div>
+      <div class="merch-card">
+        <div class="merch-img cream-bg">
+          <div class="merch-placeholder">
+            <div class="merch-garment">🧢</div>
+            <div class="merch-logo-text">Outfitted.</div>
+          </div>
+          <div class="photo-note">Photo coming soon</div>
+        </div>
+        <div class="merch-body">
+          <div class="merch-tag soon">Coming Soon</div>
+          <div class="merch-name">Signature Hat</div>
+          <div class="merch-detail">Structured cap. Embroidered "Outfitted." logo. Multiple colorways.</div>
+          <div class="merch-price">TBD</div>
+          <a href="mailto:Outfittedai@outlook.com?subject=Notify Me — Outfitted Hat" class="merch-btn disabled">Notify Me</a>
+        </div>
+      </div>
+    </div>
+    <div class="merch-channels">
+      <p>Also available on</p>
+      <div class="channel-pills">
+        <div class="channel-pill">Instagram</div>
+        <div class="channel-pill">TikTok Shop</div>
+        <div class="channel-pill">Shopify</div>
+        <div class="channel-pill">Outfitted App</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESET BIN -->
+  <section class="reset-bin" id="reset">
+    <div class="section-eyebrow">The Reset Bin by Outfitted</div>
+    <div class="reset-layout">
+      <div class="reset-img">
+        <img src="reset-bin.png" alt="The Reset Bin by Outfitted — premium wardrobe organizer with Rewear, Wash Soon, and Delicates compartments. Features magnetic labels, scent insert, removable inner bags, and soft-close lid." />
+      </div>
+      <div class="reset-copy">
+        <div class="coming-badge">✦ Coming Soon</div>
+        <h3>The wardrobe organizer<br/>that thinks like<br/><em>a stylist.</em></h3>
+        <p>The Reset Bin is Outfitted's premium wardrobe organizer — designed to look like furniture, not laundry. Three labeled compartments eliminate the daily chaos of the floor pile and the chair in every bedroom.</p>
+        <p>Magnetic labels, scent insert, removable inner bags, and a soft-close lid. The kind of piece you'd actually display in your room.</p>
+        <div class="compartments">
+          <div class="comp"><div class="comp-label">Rewear</div><div class="comp-desc">Worn once, ready to go again</div></div>
+          <div class="comp"><div class="comp-label">Wash Soon</div><div class="comp-desc">Worn, needs cleaning</div></div>
+          <div class="comp"><div class="comp-label">Delicates</div><div class="comp-desc">Handle with care</div></div>
+        </div>
+        <div class="reset-features">
+          <div class="rf">Magnetic removable labels</div>
+          <div class="rf">Soft-close lid</div>
+          <div class="rf">Scent insert compartment</div>
+          <div class="rf">Removable inner bags</div>
+          <div class="rf">Premium wood finish</div>
+          <div class="rf">App integration (Phase 2)</div>
+        </div>
+        <div class="specs">
+          <div class="spec"><div class="spec-label">Retail Price</div><div class="spec-val">$120–150</div></div>
+          <div class="spec"><div class="spec-label">Gross Margin</div><div class="spec-val">~65%</div></div>
+          <div class="spec"><div class="spec-label">Phase 1</div><div class="spec-val">Non-smart</div></div>
+          <div class="spec"><div class="spec-label">Phase 2</div><div class="spec-val">App-connected</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SMART PHASE 2 -->
+  <section class="smart">
+    <div class="section-eyebrow">Phase 2 — Smart Integration</div>
+    <h2 style="color:var(--cream)">The bin that<br/><em>talks to your app.</em></h2>
+    <p class="section-sub" style="color:rgba(255,245,233,0.6)">Phase 2 integrates RFID and optical sensors that sync directly with the Outfitted app — closing the loop between your physical wardrobe and your digital stylist.</p>
+    <div class="smart-grid">
+      <div class="smart-card">
+        <div class="smart-icon">📡</div>
+        <div class="smart-title">Auto Wear Tracking</div>
+        <div class="smart-desc">RFID sensors detect which items enter the bin and automatically log them as worn in the Outfitted app. Your closet score updates without lifting a finger.</div>
+        <span class="p2-badge">Phase 2</span>
+      </div>
+      <div class="smart-card">
+        <div class="smart-icon">🔄</div>
+        <div class="smart-title">Resale Triggers</div>
+        <div class="smart-desc">Items that sit in "Rewear" for 30+ days without being worn again automatically surface as resale candidates in the app. Earn from what you're not wearing.</div>
+        <span class="p2-badge">Phase 2</span>
+      </div>
+      <div class="smart-card">
+        <div class="smart-icon">✦</div>
+        <div class="smart-title">Outfit Intelligence</div>
+        <div class="smart-desc">Real wear data feeds back into the AI outfit engine — so suggestions get smarter over time based on what you actually reach for, not just what's in your closet.</div>
+        <span class="p2-badge">Phase 2</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST -->
+  <section class="waitlist">
+    <h2>Be first to know<br/><em style="font-style:italic;color:var(--coral)">when it drops.</em></h2>
+    <p>The Reset Bin is currently in the sampling phase. Join the waitlist and be notified when pre-orders open.</p>
+    <a href="mailto:Outfittedai@outlook.com?subject=Reset Bin Waitlist" class="btn-primary">Join the Waitlist →</a>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-logo"><span class="spark">✦</span> Outfitted</div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a><a href="founders.html">Founders</a><a href="product.html">Product</a><a href="partners.html">Partners</a><a href="invest.html">Investors</a><a href="mailto:Outfittedai@outlook.com">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Outfitted AI LLC. Los Angeles, CA.</div>
+      <div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+    </div>
+  </footer>
+</body>
+</html>
