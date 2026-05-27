@@ -39,21 +39,24 @@
 
     /* MERCH */
     .merch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; }
-    .merch-card { background: var(--white); border-radius: 20px; overflow: hidden; border: 1px solid rgba(26,20,16,0.06); transition: transform 0.2s, box-shadow 0.2s; }
+    .merch-card { background: var(--white); border-radius: 20px; overflow: hidden; border: 1px solid rgba(26,20,16,0.06); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; }
     .merch-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26,20,16,0.1); }
-    .merch-img { height: 260px; display: flex; align-items: center; justify-content: center; position: relative; }
-    .merch-img.bone { background: linear-gradient(145deg, #F5F0E8, #E8E0D0); }
+    .merch-img { height: 320px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .merch-img.bone-bg { background: linear-gradient(145deg, #F5F0E8, #E8E0D0); }
     .merch-img.black-bg { background: linear-gradient(145deg, #2A2018, #1A1410); }
+    .merch-img.white-bg { background: linear-gradient(145deg, #FAFAFA, #EDEDED); }
     .merch-img.cream-bg { background: linear-gradient(145deg, #FFF5E9, #F5EAD8); }
+    .merch-img img { width: 100%; height: 100%; object-fit: contain; padding: 1.5rem; mix-blend-mode: multiply; }
+    .merch-img.black-bg img { mix-blend-mode: normal; }
     .merch-placeholder { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
     .merch-garment { font-size: 4rem; }
     .merch-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; opacity: 0.4; }
     .photo-note { position: absolute; bottom: 1rem; right: 1rem; background: rgba(255,111,97,0.1); border: 1px dashed var(--coral); border-radius: 8px; padding: 0.35rem 0.7rem; font-size: 0.62rem; color: var(--coral); text-transform: uppercase; letter-spacing: 0.06em; }
-    .merch-body { padding: 1.5rem; }
-    .merch-tag { display: inline-block; background: rgba(135,169,107,0.15); color: var(--sage); font-size: 0.65rem; font-weight: 500; padding: 0.2rem 0.6rem; border-radius: 100px; margin-bottom: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; }
+    .merch-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+    .merch-tag { display: inline-block; align-self: flex-start; background: rgba(135,169,107,0.15); color: var(--sage); font-size: 0.65rem; font-weight: 500; padding: 0.2rem 0.6rem; border-radius: 100px; margin-bottom: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; }
     .merch-tag.soon { background: rgba(255,111,97,0.1); color: var(--coral); }
     .merch-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: 0.3rem; }
-    .merch-detail { font-size: 0.8rem; color: var(--ink-light); margin-bottom: 0.75rem; line-height: 1.5; }
+    .merch-detail { font-size: 0.8rem; color: var(--ink-light); margin-bottom: 0.75rem; line-height: 1.5; flex: 1; }
     .merch-price { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--coral); margin-bottom: 1rem; }
     .merch-btn { display: block; text-align: center; background: var(--ink); color: var(--white); padding: 0.75rem; border-radius: 100px; font-size: 0.82rem; font-weight: 500; text-decoration: none; transition: background 0.2s; }
     .merch-btn:hover { background: var(--coral); }
@@ -183,38 +186,78 @@
     <h2>Wear the<br/><em>brand.</em></h2>
     <p class="section-sub">Premium embroidered essentials. The "Outfitted." logo — centered, clean, understated. Pieces designed to live in your actual rotation.</p>
     <div class="merch-grid">
-      <div class="merch-card">
-        <div class="merch-img bone">
-          <div class="merch-placeholder">
-            <div class="merch-garment">👕</div>
-            <div class="merch-logo-text">Outfitted.</div>
-          </div>
-          <div class="photo-note">Photo coming soon</div>
-        </div>
-        <div class="merch-body">
-          <div class="merch-tag">New</div>
-          <div class="merch-name">Classic Tee — Bone</div>
-          <div class="merch-detail">Premium cotton. Centered "Outfitted." embroidery. Relaxed fit. Sizes XS–3XL.</div>
-          <div class="merch-price">$45</div>
-          <a href="mailto:Outfittedai@outlook.com?subject=Merch Order — Classic Tee Bone" class="merch-btn">Order Now →</a>
-        </div>
-      </div>
+
+      <!-- Men's Tee — Black -->
       <div class="merch-card">
         <div class="merch-img black-bg">
-          <div class="merch-placeholder">
-            <div class="merch-garment">👕</div>
-            <div class="merch-logo-text" style="color:rgba(255,245,233,0.3)">Outfitted.</div>
-          </div>
-          <div class="photo-note">Photo coming soon</div>
+          <img src="images/tee-black.png" alt="Outfitted Classic Tee in Black" />
         </div>
         <div class="merch-body">
           <div class="merch-tag">New</div>
-          <div class="merch-name">Classic Tee — Black</div>
+          <div class="merch-name">Men's Classic Tee — Black</div>
           <div class="merch-detail">Premium cotton. Centered "Outfitted." embroidery. Relaxed fit. Sizes XS–3XL.</div>
           <div class="merch-price">$45</div>
-          <a href="mailto:Outfittedai@outlook.com?subject=Merch Order — Classic Tee Black" class="merch-btn">Order Now →</a>
+          <a href="https://buy.stripe.com/7sY3cx3vqgO22qB8kt2kw00" target="_blank" class="merch-btn">Order Now →</a>
         </div>
       </div>
+
+      <!-- Men's Tee — Bone -->
+      <div class="merch-card">
+        <div class="merch-img bone-bg">
+          <img src="images/tee-bone.png" alt="Outfitted Classic Tee in Bone" />
+        </div>
+        <div class="merch-body">
+          <div class="merch-tag">New</div>
+          <div class="merch-name">Men's Classic Tee — Bone</div>
+          <div class="merch-detail">Premium cotton. Centered "Outfitted." embroidery. Relaxed fit. Sizes XS–3XL.</div>
+          <div class="merch-price">$45</div>
+          <a href="https://buy.stripe.com/cNi5kF5DyapE7KV3092kw01" target="_blank" class="merch-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Men's Tee — White -->
+      <div class="merch-card">
+        <div class="merch-img white-bg">
+          <img src="images/tee-mens-white.png" alt="Outfitted Classic Tee in White" />
+        </div>
+        <div class="merch-body">
+          <div class="merch-tag">New</div>
+          <div class="merch-name">Men's Classic Tee — White</div>
+          <div class="merch-detail">Premium cotton. Centered "Outfitted." embroidery. Relaxed fit. Sizes XS–3XL.</div>
+          <div class="merch-price">$45</div>
+          <a href="https://buy.stripe.com/cNiaEZ1nieFU7KV1W52kw02" target="_blank" class="merch-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Women's Baby Cropped Tee — White -->
+      <div class="merch-card">
+        <div class="merch-img white-bg">
+          <img src="images/tee-womens-baby-cropped.png" alt="Outfitted Women's Baby Cropped Tee in White" />
+        </div>
+        <div class="merch-body">
+          <div class="merch-tag">New</div>
+          <div class="merch-name">Women's Baby Cropped Tee — White</div>
+          <div class="merch-detail">Premium cotton. Centered "Outfitted." embroidery. Cropped fit. Sizes XS–XL.</div>
+          <div class="merch-price">$45</div>
+          <a href="https://buy.stripe.com/9B63cx6HC55ke9j9ox2kw05" target="_blank" class="merch-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Women's Strappy Cropped Tank — White -->
+      <div class="merch-card">
+        <div class="merch-img white-bg">
+          <img src="images/tank-womens-strappy-cropped.png" alt="Outfitted Women's Strappy Cropped Tank in White" />
+        </div>
+        <div class="merch-body">
+          <div class="merch-tag">New</div>
+          <div class="merch-name">Women's Strappy Cropped Tank — White</div>
+          <div class="merch-detail">Premium cotton. Centered "Outfitted." embroidery. Cropped fit. Sizes XS–XL.</div>
+          <div class="merch-price">$45</div>
+          <a href="https://buy.stripe.com/6oU7sN0jecxM8OZ58h2kw04" target="_blank" class="merch-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Signature Hat — Coming Soon -->
       <div class="merch-card">
         <div class="merch-img cream-bg">
           <div class="merch-placeholder">
@@ -231,13 +274,11 @@
           <a href="mailto:Outfittedai@outlook.com?subject=Notify Me — Outfitted Hat" class="merch-btn disabled">Notify Me</a>
         </div>
       </div>
+
     </div>
     <div class="merch-channels">
       <p>Also available on</p>
       <div class="channel-pills">
-        <div class="channel-pill">Instagram</div>
-        <div class="channel-pill">TikTok Shop</div>
-        <div class="channel-pill">Shopify</div>
         <div class="channel-pill">Outfitted App</div>
       </div>
     </div>
