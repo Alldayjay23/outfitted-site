@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="color-scheme" content="light only" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Partner With Outfitted — Affiliate & Brand Partnerships</title>
-  <meta name="description" content="Partner with Outfitted — an AI fashion platform reaching style-conscious shoppers aged 18-35. Affiliate commerce, featured placements, and co-marketing opportunities." />
+  <title>Partner With Outfitted — Brand, Affiliate & In-Store Partnerships</title>
+  <meta name="description" content="Partner with Outfitted — affiliate and brand partnerships for online retailers, plus a free in-store QR tool for physical retail. Help your customers shop with confidence." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -117,6 +117,20 @@
       #mobilenav a.cta { font-family:'DM Sans',sans-serif; font-size:1rem; background:#FF6F61; color:#ffffff !important; padding:0.75rem 2.5rem; border-radius:100px; }
       #closenav { position:absolute; top:1.5rem; right:1.5rem; background:none; border:none; font-size:1.5rem; cursor:pointer; color:#1A1410; }
       @media (max-width: 900px) { #topnav { padding: 1rem 1.5rem; } #topnav ul { display: none !important; } #hamburger { display: flex !important; } #topnav a.logo { display: flex !important; } }
+
+    /* Tab toggle */
+    .tab-bar { position: sticky; top: 68px; z-index: 999; background: var(--cream); border-bottom: 1px solid rgba(26,20,16,0.08); display: flex; justify-content: center; gap: 0; }
+    .tab-btn { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 1rem 2.5rem; background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; color: var(--ink-light); transition: color 0.2s, border-color 0.2s; }
+    .tab-btn.active { color: var(--coral); border-bottom-color: var(--coral); }
+    .tab-btn:hover { color: var(--coral); }
+    @media (max-width: 600px) { .tab-btn { padding: 0.85rem 1.25rem; font-size: 0.72rem; } }
+
+    /* QR placeholder */
+    .qr-placeholder { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; width: 120px; height: 120px; border: 2px solid rgba(255,111,97,0.35); border-radius: 12px; text-decoration: none; background: var(--white); gap: 0.3rem; padding: 1rem; text-align: center; transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
+    .qr-placeholder:hover { border-color: var(--coral); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,111,97,0.12); }
+    .qr-placeholder .qr-spark { font-size: 1.6rem; color: var(--coral); line-height: 1; }
+    .qr-placeholder .qr-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--coral); margin-top: 0.2rem; }
+    .qr-placeholder .qr-sub { font-size: 0.62rem; color: var(--ink-light); }
   </style>
 </head>
 <body>
@@ -142,6 +156,14 @@
     <a href="invest.html" onclick="document.getElementById('mobilenav').classList.remove('open')">Investors</a>
     <a href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" class="cta">Download App</a>
   </div>
+
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('brand', this)">Brand &amp; Affiliate</button>
+    <button class="tab-btn" onclick="switchTab('instore', this)">In-Store Partners</button>
+  </div>
+
+  <!-- ══ TAB 1: BRAND & AFFILIATE ══ -->
+  <div id="tab-brand" class="tab-content">
 
   <!-- MOBILE MENU --><section class="hero">
     <div class="hero-content">
@@ -274,6 +296,126 @@
     </div>
   </section>
 
+  </div><!-- end #tab-brand -->
+
+  <!-- ══ TAB 2: IN-STORE PARTNERS ══ -->
+  <div id="tab-instore" class="tab-content" style="display:none">
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">In-Store Retail Partners · Free QR Tool</div>
+      <h1>Help your customers<br/><em>shop with confidence.</em></h1>
+      <p class="hero-sub">A free tool that helps shoppers instantly see how any item in your store pairs with what they already own. Zero setup. Zero cost to you.</p>
+      <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+        <a href="mailto:outfittedai@outlook.com?subject=In-Store%20Partner%20Request" class="btn-primary">Request Your QR Code →</a>
+        <a href="#instore-how" class="btn-secondary">See how it works</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="audience">
+    <div class="section-eyebrow">The Problem</div>
+    <h2>The moment of doubt<br/><em>costs you the sale.</em></h2>
+    <p class="section-sub" style="color:rgba(255,245,233,0.65);max-width:640px;">Your customer sees a piece they love. But they're not sure if it goes with what they own. They hesitate. They leave. Outfitted eliminates that moment — instantly showing them 3 complete outfits using their real closet.</p>
+  </section>
+
+  <section class="how" id="instore-how">
+    <div class="section-eyebrow">How It Works</div>
+    <h2>Three steps to<br/><em>confident shoppers.</em></h2>
+    <p class="section-sub">No integration. No tech setup. Works in any store, starting today.</p>
+    <div class="how-steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">Display our QR code in your store</div>
+        <div class="step-desc">Place it at the register, fitting room, or on hangers. We'll send you a custom printed card — free.</div>
+        <div style="margin-top:1.75rem;display:flex;justify-content:center;">
+          <a href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" rel="noopener" class="qr-placeholder">
+            <span class="qr-spark">✦</span>
+            <span class="qr-label">Scan Me</span>
+            <span class="qr-sub">Download Outfitted</span>
+          </a>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">Customer scans and downloads Outfitted</div>
+        <div class="step-desc">Free iOS app. Takes 30 seconds to download and set up. No commitment required to try.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">They photo any item and see their outfits</div>
+        <div class="step-desc">Outfitted shows 3 complete looks using their real closet. Confident shoppers buy more.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-eyebrow">What You Get</div>
+    <h2>Four reasons it<br/><em>works for your store.</em></h2>
+    <p class="section-sub">No commitments, no contracts. Just a free tool that turns hesitation into a completed sale.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">📈</div>
+        <div class="why-title">Higher Conversion</div>
+        <div class="why-desc">Confident shoppers complete purchases. Hesitant ones leave. Outfitted removes the moment of doubt before it turns into a walk-out.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔄</div>
+        <div class="why-title">Fewer Returns</div>
+        <div class="why-desc">Items bought with closet context get worn, not returned. When shoppers see the full outfit before buying, they commit.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <div class="why-title">Zero Tech Required</div>
+        <div class="why-desc">No integration, no setup, no cost to you. We send you a printed card. You put it up. That's it.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🎁</div>
+        <div class="why-title">Free for Your Customers</div>
+        <div class="why-desc">Outfitted is free to download and use. No friction between your customer and their purchase decision.</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--cream-dark);text-align:center;">
+    <div class="section-eyebrow">Perfect For</div>
+    <h2 style="margin-left:auto;margin-right:auto;">Built for physical retail<br/>of <em>every kind.</em></h2>
+    <p class="section-sub" style="margin:0 auto;text-align:center;">Any store where customers touch and try on clothing is the right fit for Outfitted.</p>
+    <div class="brands-row" style="margin-top:3rem;">
+      <div class="brand-pill">Thrift &amp; Consignment</div>
+      <div class="brand-pill">Boutiques</div>
+      <div class="brand-pill">Mall Retailers</div>
+      <div class="brand-pill">Vintage Shops</div>
+      <div class="brand-pill">Streetwear Stores</div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="section-eyebrow">Get Started</div>
+    <h2>Get your<br/><em>free QR code.</em></h2>
+    <p class="section-sub" style="margin:0 auto 2.5rem;text-align:center;">We'll send you a custom QR code card for your store within 48 hours. No commitment required.</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="contact-role">Growth &amp; Brand</div>
+        <div class="contact-name">Tiffany Brown</div>
+        <div class="contact-detail">outfittedai@outlook.com</div>
+        <div class="contact-detail" style="margin-top:0.3rem;">@outfittedapp_ on Instagram</div>
+      </div>
+      <div class="contact-item" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;">
+        <a href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" rel="noopener" class="qr-placeholder">
+          <span class="qr-spark">✦</span>
+          <span class="qr-label">Download Free</span>
+          <span class="qr-sub">iOS App Store</span>
+        </a>
+      </div>
+    </div>
+    <div class="cta-buttons">
+      <a href="mailto:outfittedai@outlook.com?subject=In-Store%20Partner%20Request" class="btn-primary">Request Your QR Code →</a>
+    </div>
+  </section>
+
+  </div><!-- end #tab-instore -->
+
   <footer>
     <div class="footer-top">
       <div class="footer-logo"><span class="spark">✦</span> Outfitted</div>
@@ -284,5 +426,19 @@
       <div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
     </div>
   </footer>
+
+  <script>
+    function switchTab(tab, btn) {
+      document.querySelectorAll('.tab-content').forEach(function(el) { el.style.display = 'none'; });
+      document.querySelectorAll('.tab-btn').forEach(function(el) { el.classList.remove('active'); });
+      document.getElementById('tab-' + tab).style.display = '';
+      btn.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    if (window.location.hash === '#instore') {
+      var btn = document.querySelectorAll('.tab-btn')[1];
+      if (btn) switchTab('instore', btn);
+    }
+  </script>
 </body>
 </html>
