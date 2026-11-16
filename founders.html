@@ -100,6 +100,10 @@
       #mobilenav a.cta { font-family:'DM Sans',sans-serif; font-size:1rem; background:#FF6F61; color:#ffffff !important; padding:0.75rem 2.5rem; border-radius:100px; }
       #closenav { position:absolute; top:1.5rem; right:1.5rem; background:none; border:none; font-size:1.5rem; cursor:pointer; color:#1A1410; }
       @media (max-width: 900px) { #topnav { padding: 1rem 1.5rem; } #topnav ul { display: none !important; } #hamburger { display: flex !important; } #topnav a.logo { display: flex !important; } }
+      /* Menu between tablet and full desktop: tighter so all items stay on one line */
+    #topnav ul li a { white-space: nowrap; }
+    #topnav a.logo { flex-shrink: 0; margin-right: 1.5rem; }
+    @media (min-width: 901px) and (max-width: 1120px) { #topnav { padding-left: 1.5rem; padding-right: 1.5rem; } #topnav ul { gap: 1.1rem; } #topnav ul li a { letter-spacing: 0.04em; } #topnav ul li a.cta { padding: 0.55rem 1rem; } }
   </style>
 </head>
 <body>
@@ -111,6 +115,7 @@
       <li><a href="founders.html" class="active">Founders</a></li>
       <li><a href="product.html" >Product</a></li>
       <li><a href="partners.html" >Partners</a></li>
+      <li><a href="/internships">Internships</a></li>
       <li><a href="invest.html" >Investors</a></li>
       <li><a href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" class="cta">Download App</a></li>
     </ul>
@@ -122,6 +127,7 @@
     <a href="founders.html" onclick="document.getElementById('mobilenav').classList.remove('open')">Founders</a>
     <a href="product.html" onclick="document.getElementById('mobilenav').classList.remove('open')">Product</a>
     <a href="partners.html" onclick="document.getElementById('mobilenav').classList.remove('open')">Partners</a>
+    <a href="/internships" onclick="document.getElementById('mobilenav').classList.remove('open')">Internships</a>
     <a href="invest.html" onclick="document.getElementById('mobilenav').classList.remove('open')">Investors</a>
     <a href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" class="cta">Download App</a>
   </div>
