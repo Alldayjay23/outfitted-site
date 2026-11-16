@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Terms of Service — Outfitted</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--coral:#FF6F61;--ink:#1A1410;--ink-light:#7A6A60;--cream:#FFF5E9;--white:#fff;}
-body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);line-height:1.7;}
-nav{background:var(--ink);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;}
-nav a{color:var(--cream);text-decoration:none;font-size:14px;}
-.logo{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--coral);font-weight:400;}
-.container{max-width:800px;margin:0 auto;padding:3rem 2rem 5rem;}
-h1{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:var(--ink);margin-bottom:0.5rem;}
-.updated{font-size:13px;color:var(--ink-light);margin-bottom:2.5rem;}
-h2{font-size:18px;font-weight:600;color:var(--ink);margin:2rem 0 0.75rem;}
-p{font-size:15px;color:#3A3030;margin-bottom:1rem;line-height:1.75;}
-ul{margin:0.5rem 0 1rem 1.5rem;}
-li{font-size:15px;color:#3A3030;margin-bottom:0.4rem;line-height:1.65;}
-a{color:var(--coral);}
-.divider{height:1px;background:#EEE;margin:2rem 0;}
-footer{background:var(--ink);padding:1.5rem 2rem;text-align:center;font-size:12px;color:#706050;}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light only" />
+  <title>Terms of Service — Outfitted</title>
+  <meta name="description" content="The terms for using Outfitted." />
+  <link rel="canonical" href="https://outfittedcloset.com/terms" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Outfitted" />
+  <meta property="og:title" content="Terms of Service — Outfitted" />
+  <meta property="og:description" content="The terms for using Outfitted." />
+  <meta property="og:url" content="https://outfittedcloset.com/terms" />
+  <meta property="og:image" content="https://outfittedcloset.com/img/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/site.css" />
 </head>
 <body>
-<nav>
-  <a href="index.html" class="logo">✦ Outfitted</a>
-  <a href="index.html">← Back to Home</a>
-</nav>
-
-<div class="container">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Outfitted home"><span aria-hidden="true">&#x2736;</span> Outfitted</a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="/">For Shoppers</a></li>
+        <li><a href="/stores">For Stores</a></li>
+        <li><a href="/internships">Internships</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-coral btn-small nav-cta" href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" rel="noopener">Get the app</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><i></i></button>
+  </div>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Main">
+    <ul>
+      <li><a href="/">For Shoppers</a></li>
+      <li><a href="/stores">For Stores</a></li>
+      <li><a href="/internships">Internships</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a class="btn btn-coral" href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" rel="noopener">Get the app</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main" class="legal">
   <h1>Terms of Service</h1>
   <p class="updated">Last updated: November 8, 2026</p>
 
@@ -100,14 +117,18 @@ footer{background:var(--ink);padding:1.5rem 2rem;text-align:center;font-size:12p
   <strong>Outfitted AI LLC</strong><br/>
   Los Angeles, California<br/>
   <a href="mailto:Outfittedai@outlook.com">Outfittedai@outlook.com</a></p>
-</div>
-
-<footer>
-  <div>© 2026 Outfitted AI LLC. All rights reserved.</div>
-  <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; opacity: 0.6; display: flex; gap: 1.5rem; justify-content: center;">
-    <a href="privacy.html" style="color: inherit; text-decoration: none;">Privacy Policy</a>
-    <a href="terms.html" style="color: inherit; text-decoration: none;">Terms of Service</a>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="fcols">
+      <div class="about"><a class="logo" href="/"><span aria-hidden="true">&#x2736;</span> Outfitted</a><p style="margin-top:.6rem;max-width:19rem">Outfits from the clothes you own, and from the stores you love. Outfitted AI LLC, Los Angeles.</p></div>
+      <div><h4>Outfitted</h4><a href="/">For Shoppers</a><a href="/stores">For Stores</a><a href="/internships">Internships</a><a href="/about">About</a></div>
+      <div><h4>Company</h4><a href="/investors">Investors</a><a href="/merch">Merch</a><a href="mailto:Outfittedai@outlook.com">Outfittedai@outlook.com</a></div>
+      <div><h4>Legal</h4><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
+    </div>
+    <div class="fbase"><span>© 2026 Outfitted AI LLC</span><span>Made in Los Angeles</span></div>
   </div>
 </footer>
+<script src="/site.js"></script>
 </body>
 </html>

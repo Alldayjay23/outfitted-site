@@ -2,397 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="color-scheme" content="light only" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Outfitted — Wear, Shop, Earn</title>
-  <meta name="description" content="Outfitted is an AI-powered personal stylist that turns your existing closet into daily outfit suggestions — then helps you shop, resell, and earn from what you already own." />
+  <meta name="color-scheme" content="light only" />
+  <title>Outfitted — See new pieces with the clothes you already own</title>
+  <meta name="description" content="Outfitted turns the clothes you own into outfits, and shows how anything new works with your wardrobe before you buy. Free on iPhone." />
+  <link rel="canonical" href="https://outfittedcloset.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Outfitted" />
+  <meta property="og:title" content="Outfitted — See new pieces with the clothes you already own" />
+  <meta property="og:description" content="Outfitted turns the clothes you own into outfits, and shows how anything new works with your wardrobe before you buy. Free on iPhone." />
+  <meta property="og:url" content="https://outfittedcloset.com/" />
+  <meta property="og:image" content="https://outfittedcloset.com/img/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --coral: #FF6F61; --coral-dark: #E55A4D; --sage: #87A96B;
-      --cream: #FFF5E9; --cream-dark: #F5EAD8; --ink: #1A1410; --ink-light: #7A6A60; --white: #FFFFFF;
-    }
-
-    html { scroll-behavior: smooth; }
-    html { background: #FFF5E9; color-scheme: light; }
-    body { font-family: 'DM Sans', sans-serif; background: #FFF5E9; color: var(--ink); overflow-x: hidden; }
-
-    .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 9rem 2rem 5rem; text-align: center; position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; top: -10%; left: 50%; transform: translateX(-50%); width: 70vw; height: 70vw; background: radial-gradient(ellipse, rgba(255,111,97,0.07) 0%, transparent 65%); pointer-events: none; }
-    .hero-content { position: relative; z-index: 1; animation: fadeUp 0.9s ease both; max-width: 720px; }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.75rem; justify-content: center; font-size: 0.73rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); margin-bottom: 1.5rem; }
-    .hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 28px; height: 1px; background: var(--coral); }
-    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.4rem, 6vw, 6.5rem); font-weight: 300; line-height: 1.05; color: var(--ink); margin-bottom: 1.5rem; }
-    h1 em { font-style: italic; color: var(--coral); }
-    .hero-sub { font-size: 1.05rem; font-weight: 300; line-height: 1.75; color: var(--ink-light); max-width: 520px; margin: 0 auto 2.5rem; }
-    .hero-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin-bottom: 3.5rem; }
-
-    .pillars-row { display: flex; gap: 3rem; justify-content: center; padding: 2rem 3rem; border-top: 1px solid rgba(26,20,16,0.1); border-bottom: 1px solid rgba(26,20,16,0.1); margin-bottom: 0; }
-    .pillar-item { text-align: center; }
-    .pillar-word { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; font-style: italic; color: var(--coral); line-height: 1; }
-    .pillar-desc { font-size: 0.72rem; font-weight: 400; color: var(--ink-light); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 0.3rem; }
-
-    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--coral); color: var(--white); padding: 0.85rem 2rem; border-radius: 100px; font-size: 0.88rem; font-weight: 500; text-decoration: none; letter-spacing: 0.02em; transition: background 0.2s, transform 0.2s; }
-    .btn-primary:hover { background: var(--coral-dark); transform: translateY(-1px); }
-    .btn-primary.dark { background: var(--ink); }
-    .btn-primary.dark:hover { background: #2A2018; }
-    .btn-secondary { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--ink); font-size: 0.88rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
-    .btn-secondary:hover { color: var(--coral); border-color: var(--coral); }
-
-    section { padding: 6rem 3rem; }
-    .section-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); margin-bottom: 1rem; }
-    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.8rem); font-weight: 300; line-height: 1.1; color: var(--ink); margin-bottom: 1.25rem; }
-    h2 em { font-style: italic; color: var(--coral); }
-    .section-sub { font-size: 1rem; font-weight: 300; line-height: 1.75; color: var(--ink-light); max-width: 560px; }
-
-    /* HOW IT WORKS */
-    .how { background: var(--ink); }
-    .how h2 { color: var(--cream); }
-    .how .section-eyebrow { color: #FF8F83; }
-    .how .section-sub { color: rgba(255,245,233,0.6); }
-    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; }
-    .how-card { background: rgba(255,245,233,0.04); border: 1px solid rgba(255,245,233,0.08); border-radius: 20px; padding: 2.5rem 2rem; transition: border-color 0.2s; }
-    .how-card:hover { border-color: rgba(255,111,97,0.3); }
-    .how-num { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 600; color: rgba(255,111,97,0.2); line-height: 1; margin-bottom: 1rem; }
-    .how-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--cream); margin-bottom: 0.75rem; }
-    .how-desc { font-size: 0.84rem; line-height: 1.7; color: rgba(255,245,233,0.55); }
-
-    /* FEATURES */
-    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 4rem; }
-    .feature-card { background: var(--white); border-radius: 20px; padding: 2rem; border: 1px solid rgba(26,20,16,0.06); transition: transform 0.2s, box-shadow 0.2s; }
-    .feature-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26,20,16,0.1); }
-    .feature-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(255,111,97,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.25rem; }
-    .feature-title { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--ink); margin-bottom: 0.6rem; }
-    .feature-desc { font-size: 0.84rem; line-height: 1.7; color: var(--ink-light); }
-
-    /* TRACTION */
-    .traction { background: var(--cream-dark); }
-    .traction-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 4rem; }
-    .traction-card { background: var(--white); border-radius: 16px; padding: 1.75rem; text-align: center; }
-    .traction-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 600; color: var(--coral); line-height: 1; margin-bottom: 0.4rem; }
-    .traction-label { font-size: 0.78rem; color: var(--ink-light); letter-spacing: 0.04em; }
-
-    /* TEAM PREVIEW */
-    .team-preview { background: var(--ink); }
-    .team-preview h2 { color: var(--cream); }
-    .team-preview .section-eyebrow { color: #FF8F83; }
-    .team-preview .section-sub { color: rgba(255,245,233,0.6); }
-    .team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 4rem; max-width: 700px; }
-    .team-card { background: rgba(255,245,233,0.04); border: 1px solid rgba(255,245,233,0.08); border-radius: 20px; padding: 2rem; transition: border-color 0.2s; }
-    .team-card:hover { border-color: rgba(255,111,97,0.3); }
-    .team-avatar { width: 72px; height: 72px; border-radius: 50%; overflow: hidden; margin-bottom: 1.25rem; }
-    .team-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
-    .team-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--cream); margin-bottom: 0.25rem; }
-    .team-role { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.85rem; }
-    .team-bio { font-size: 0.83rem; line-height: 1.65; color: rgba(255,245,233,0.55); }
-
-    /* CTA */
-    .cta-section { text-align: center; padding: 8rem 3rem; position: relative; overflow: hidden; }
-    .cta-section::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 600px; background: radial-gradient(ellipse, rgba(255,111,97,0.09) 0%, transparent 70%); pointer-events: none; }
-    .cta-section h2 { max-width: 600px; margin: 0 auto 1.5rem; }
-    .cta-section .section-sub { margin: 0 auto 2.5rem; text-align: center; }
-    .cta-buttons { display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
-
-    footer { background: var(--ink); padding: 2.5rem 3rem; border-top: 1px solid rgba(255,245,233,0.06); }
-    .footer-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
-    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--cream); }
-    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
-    .footer-links a { font-size: 0.75rem; color: rgba(255,245,233,0.4) !important; text-decoration: none; transition: color 0.2s; letter-spacing: 0.06em; text-transform: uppercase; }
-    .footer-links a:hover { color: var(--coral); }
-    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,245,233,0.06); }
-    .footer-copy { font-size: 0.75rem; color: rgba(255,245,233,0.25); }
-    .footer-legal { display: flex; gap: 1.5rem; }
-    .footer-legal a { font-size: 0.72rem; color: rgba(255,245,233,0.3); text-decoration: none; transition: color 0.2s; }
-    .footer-legal a:hover { color: var(--coral); }
-
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-    @media (max-width: 900px) {
-      section { padding: 4rem 1.5rem; }
-      .hero { padding: 7rem 1.5rem 3rem; }
-      .pillars-row { gap: 1.5rem; flex-wrap: wrap; }
-      .how-grid, .features-grid { grid-template-columns: 1fr; }
-      .traction-grid { grid-template-columns: repeat(2, 1fr); }
-      .team-grid { grid-template-columns: 1fr; max-width: 100%; }
-      footer { padding: 2rem 1.5rem; }
-      .footer-top, .footer-bottom { flex-direction: column; text-align: center; }
-    }
-
-    .mockup-section { padding: 5rem 3rem; display: flex; justify-content: center; background: var(--cream); }
-    .mockup-wrap { position: relative; display: inline-block; }
-    .app-mockup { background: var(--ink); border-radius: 36px; padding: 2px; box-shadow: 0 40px 80px rgba(26,20,16,0.2), 0 0 0 1px rgba(255,111,97,0.15); width: 300px; }
-    .app-inner { background: var(--cream); border-radius: 34px; overflow: hidden; padding: 1.75rem 1.5rem; min-height: 530px; display: flex; flex-direction: column; gap: 0.85rem; }
-    .app-header { display: flex; align-items: center; justify-content: space-between; }
-    .app-logo-sm { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--ink); }
-    .app-av { width: 32px; height: 32px; border-radius: 50%; background: var(--coral); display: flex; align-items: center; justify-content: center; color: white; font-size: 0.75rem; font-weight: 600; }
-    .app-lbl { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); }
-    .oc { background: var(--white); border-radius: 16px; padding: 1rem; box-shadow: 0 2px 12px rgba(26,20,16,0.06); }
-    .or { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; }
-    .oi { flex: 1; aspect-ratio: 1; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; }
-    .oi.t { background: #E8F4FD; } .oi.b { background: #FDF0E8; } .oi.s { background: #F0F8EC; }
-    .om { display: flex; align-items: center; justify-content: space-between; }
-    .oa { font-size: 0.7rem; color: var(--sage); font-style: italic; }
-    .ob { background: var(--coral); color: white; border: none; border-radius: 100px; padding: 0.3rem 0.8rem; font-size: 0.65rem; font-weight: 500; cursor: pointer; }
-    .ca { display: flex; flex-direction: column; gap: 0.5rem; }
-    .ab { background: var(--coral); color: white; border-radius: 12px 12px 12px 2px; padding: 0.65rem 0.85rem; font-size: 0.7rem; line-height: 1.5; max-width: 90%; }
-    .ub { background: var(--ink); color: white; border-radius: 12px 12px 2px 12px; padding: 0.65rem 0.85rem; font-size: 0.7rem; line-height: 1.5; max-width: 80%; margin-left: auto; }
-    .at { display: flex; justify-content: space-around; padding: 0.75rem 0 0.25rem; border-top: 1px solid rgba(26,20,16,0.08); margin-top: auto; }
-    .ti { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; font-size: 0.55rem; color: var(--ink-light); }
-    .ti.act { color: var(--coral); }
-    .ticon { font-size: 1rem; }
-    .bf { position: absolute; background: var(--white); border-radius: 12px; padding: 0.6rem 1rem; box-shadow: 0 8px 24px rgba(26,20,16,0.13); font-size: 0.73rem; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; white-space: nowrap; animation: floatbadge 4s ease-in-out infinite; }
-    .bf.b1 { top: 8%; right: -168px; animation-delay: 0s; }
-    .bf.b2 { top: 42%; left: -168px; animation-delay: 1.5s; }
-    .bf.b3 { bottom: 12%; right: -156px; animation-delay: 0.75s; }
-    /* Phones: keep the badges on screen. Out past the edge they widened the page
-       and pushed the menu button off the right side, where it could not be tapped. */
-    @media (max-width: 600px) { .bf.b1, .bf.b3 { right: -24px; } .bf.b2 { left: -24px; } }
-    @media (max-width: 360px) { .bf.b1, .bf.b3 { right: -6px; } .bf.b2 { left: -6px; } .bf { padding: 0.5rem 0.75rem; font-size: 0.68rem; } }
-    .bd { width: 8px; height: 8px; border-radius: 50%; background: var(--sage); flex-shrink: 0; }
-    .bd.c { background: var(--coral); }
-    @keyframes floatbadge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-      #topnav { position:fixed; top:0; left:0; right:0; z-index:9999; display:flex; align-items:center; justify-content:space-between; padding:1.25rem 3rem; background:#FFF5E9; border-bottom:2px solid rgba(255,111,97,0.25); }
-      #topnav a.logo { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:600; color:#1A1410; text-decoration:none; display:flex; align-items:center; gap:0.5rem; }
-      #topnav .spark { color:#FF6F61; }
-      #topnav ul { display:flex; align-items:center; gap:2rem; list-style:none; margin:0; padding:0; }
-      #topnav ul li { list-style:none; }
-      #topnav ul li a { font-size:0.8rem !important; font-weight:700 !important; letter-spacing:0.08em; text-transform:uppercase; color:#1A1410 !important; text-decoration:none !important; opacity:1 !important; visibility:visible !important; }
-      #topnav ul li a:hover, #topnav ul li a.active { color:#FF6F61 !important; }
-      #topnav ul li a.cta { background:#FF6F61 !important; color:#ffffff !important; padding:0.55rem 1.4rem; border-radius:100px; }
-      #topnav ul li a.cta:hover { background:#E55A4D !important; }
-      #hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
-      #hamburger span { display:block; width:24px; height:2px; background:#1A1410; border-radius:2px; }
-      #mobilenav { display:none; position:fixed; inset:0; background:#FFF5E9; z-index:10000; flex-direction:column; align-items:center; justify-content:center; gap:2rem; }
-      #mobilenav.open { display:flex !important; }
-      #mobilenav a { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:300; color:#1A1410 !important; text-decoration:none; }
-      #mobilenav a:hover { color:#FF6F61 !important; }
-      #mobilenav a.cta { font-family:'DM Sans',sans-serif; font-size:1rem; background:#FF6F61; color:#ffffff !important; padding:0.75rem 2.5rem; border-radius:100px; }
-      #closenav { position:absolute; top:1.5rem; right:1.5rem; background:none; border:none; font-size:1.5rem; cursor:pointer; color:#1A1410; }
-      @media (max-width: 900px) { #topnav { padding: 1rem 1.5rem; } #topnav ul { display: none !important; } #hamburger { display: flex !important; } #topnav a.logo { display: flex !important; } }
-      /* Menu between tablet and full desktop: tighter so all items stay on one line */
-    #topnav ul li a { white-space: nowrap; }
-    #topnav a.logo { flex-shrink: 0; margin-right: 1.5rem; }
-    @media (min-width: 901px) and (max-width: 1120px) { #topnav { padding-left: 1.5rem; padding-right: 1.5rem; } #topnav ul { gap: 1.1rem; } #topnav ul li a { letter-spacing: 0.04em; } #topnav ul li a.cta { padding: 0.55rem 1rem; } }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/site.css" />
 </head>
 <body>
-
-  <nav id="topnav">
-    <a href="index.html" class="logo"><span class="spark">&#x2736;</span> Outfitted</a>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="founders.html" >Founders</a></li>
-      <li><a href="product.html" >Product</a></li>
-      <li><a href="partners.html" >Partners</a></li>
-      <li><a href="/internships">Internships</a></li>
-      <li><a href="invest.html" >Investors</a></li>
-      <li><a href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" class="cta">Download App</a></li>
-    </ul>
-    <button id="hamburger" onclick="document.getElementById('mobilenav').classList.add('open')" aria-label="Menu"><span></span><span></span><span></span></button>
-  </nav>
-  <div id="mobilenav">
-    <button id="closenav" onclick="document.getElementById('mobilenav').classList.remove('open')">&#x2715;</button>
-    <a href="index.html" onclick="document.getElementById('mobilenav').classList.remove('open')">Home</a>
-    <a href="founders.html" onclick="document.getElementById('mobilenav').classList.remove('open')">Founders</a>
-    <a href="product.html" onclick="document.getElementById('mobilenav').classList.remove('open')">Product</a>
-    <a href="partners.html" onclick="document.getElementById('mobilenav').classList.remove('open')">Partners</a>
-    <a href="/internships" onclick="document.getElementById('mobilenav').classList.remove('open')">Internships</a>
-    <a href="invest.html" onclick="document.getElementById('mobilenav').classList.remove('open')">Investors</a>
-    <a href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" class="cta">Download App</a>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Outfitted home"><span aria-hidden="true">&#x2736;</span> Outfitted</a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="/" aria-current="page">For Shoppers</a></li>
+        <li><a href="/stores">For Stores</a></li>
+        <li><a href="/internships">Internships</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-coral btn-small nav-cta" href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" rel="noopener">Get the app</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><i></i></button>
   </div>
-
-  <!-- MOBILE MENU --><section class="hero">
-    <div class="hero-content">
-      <div class="hero-eyebrow">AI Personal Stylist · iOS App</div>
-      <h1>Wear more.<br/>Shop <em>smarter.</em><br/>Earn from your closet.</h1>
-      <p class="hero-sub">Outfitted is the AI-powered styling app that turns your existing wardrobe into daily outfit suggestions — then helps you discover new pieces and sell what you don't wear.</p>
-      <div class="hero-actions">
-        <a href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" class="btn-primary">Download on the App Store →</a>
-        <a href="https://youtube.com/shorts/QoiiJCSgkPc?feature=share" target="_blank" class="btn-primary dark">▶ Watch Demo</a>
-        <a href="#how" class="btn-secondary">See how it works</a>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Main">
+    <ul>
+      <li><a href="/" aria-current="page">For Shoppers</a></li>
+      <li><a href="/stores">For Stores</a></li>
+      <li><a href="/internships">Internships</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a class="btn btn-coral" href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" rel="noopener">Get the app</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="eyebrow">Free on iPhone</div>
+        <h1>See how new pieces work with the clothes <em>you already own.</em></h1>
+        <p class="lede">Add your closet once. Outfitted puts together outfits for your day and your plans, and shows you how anything you're thinking of buying works with what's already in your wardrobe.</p>
+        <div class="hero-actions">
+          <a class="appstore" href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.72-1.35-.14-2.64.8-3.32.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.17-1.53 2.66-.39 6.6 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.47-.03-.01-2.3-.88-2.3-3.51zM14.2 6.13c.6-.73 1-1.74.9-2.75-.86.04-1.92.58-2.54 1.3-.55.64-1.04 1.67-.91 2.66.96.07 1.95-.49 2.55-1.21z"/></svg>
+            <span><small>Download on the</small><b>App Store</b></span>
+          </a>
+          <a class="btn btn-line" href="#how">How it works</a>
+        </div>
+        <div class="trust"><span>Free to download</span><span>Try it without an account</span><span>Works with the clothes you own</span></div>
       </div>
-      <div style="margin-top:1.5rem;">
-        <a href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank">
-          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height:44px;" />
+      <div class="phone fill">
+        <div class="screen"><img src="/img/app-style-me.jpg" width="760" height="1644" alt="The Outfitted app's Style Me With This screen: outfit ideas built around a cream zip-up jacket using clothes already in the closet." /></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="band-sand">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">How it works</div>
+        <h2>Three steps, then it's <em>every morning.</em></h2>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n"></div><h3>Add your closet</h3><p>Snap your clothes or pick photos from your camera roll. Outfitted recognizes each piece and sorts it for you.</p></div>
+        <div class="step"><div class="n"></div><h3>Get dressed faster</h3><p>Ask for an outfit for work, a date or the weekend. Every look uses clothes you own, with the weather in mind.</p></div>
+        <div class="step"><div class="n"></div><h3>Shop with your closet</h3><p>Before you buy, see the new piece in outfits with what you already have, so it gets worn instead of returned.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Also in the app</div>
+        <h2>Small things that make your <em>closet work harder.</em></h2>
+      </div>
+      <div class="feats two">
+        <div class="feat"><b>Ask your stylist</b><span>Type or say what you need, like "more casual", "warmer" or "no black".</span></div>
+        <div class="feat"><b>Weekly planner</b><span>A week of outfits in one go, one look for each day.</span></div>
+        <div class="feat"><b>Virtual try-on</b><span>See a piece on you before you wear it or buy it.</span></div>
+        <div class="feat"><b>Sell what you don't wear</b><span>List a piece in under a minute. Payments go through Stripe.</span></div>
+      </div>
+      <div class="app-row">
+        <figure><div class="frame"><img src="/img/app-ask-stylist.jpg" width="760" height="1644" loading="lazy" alt="Ask Stylist: a date-night look with a stylist note." /></div><figcaption>Ask your stylist</figcaption></figure>
+        <figure><div class="frame"><img src="/img/app-planner.jpg" width="760" height="1644" loading="lazy" alt="Planner: a week of outfits, one per day." /></div><figcaption>Weekly planner</figcaption></figure>
+        <figure><div class="frame"><img src="/img/app-closet.jpg" width="760" height="1644" loading="lazy" alt="My Closet: items sorted into tops, bottoms and dresses." /></div><figcaption>Your closet</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-sand">
+    <div class="wrap">
+      <div class="split">
+        <a class="door ink" href="/stores">
+          <div class="eyebrow">For boutiques</div>
+          <h3>Bring new shoppers to your store, and sell more to the ones you have.</h3>
+          <p>Outfits from your own stock, in your store, on your website and at local events.</p>
+          <span class="go">For Stores →</span>
+        </a>
+        <a class="door sage" href="/internships">
+          <div class="eyebrow">For students</div>
+          <h3>Build the future of fashion with us.</h3>
+          <p>We're planning our Spring 2027 internship cohort, with an anticipated January start.</p>
+          <span class="go">Internships →</span>
         </a>
       </div>
-      <div class="pillars-row">
-        <div class="pillar-item"><div class="pillar-word">Wear</div><div class="pillar-desc">AI Outfit Styling</div></div>
-        <div class="pillar-item"><div class="pillar-word">Shop</div><div class="pillar-desc">Smart Discovery</div></div>
-        <div class="pillar-item"><div class="pillar-word">Earn</div><div class="pillar-desc">P2P Resale</div></div>
-      </div>
     </div>
   </section>
-
-
-  <!-- APP MOCKUP -->
-  <section class="mockup-section">
-    <div class="mockup-wrap">
-      <div class="app-mockup">
-        <div class="app-inner">
-          <div class="app-header">
-            <div class="app-logo-sm"><span class="spark">✦</span> Outfitted</div>
-            <div class="app-av">JJ</div>
-          </div>
-          <div class="app-lbl">Today's Outfit</div>
-          <div class="oc">
-            <div class="or">
-              <div class="oi t">👕</div>
-              <div class="oi b">👖</div>
-              <div class="oi s">👟</div>
-            </div>
-            <div class="om">
-              <span class="oa">✦ Elevated Casual</span>
-              <button class="ob">Try Again</button>
-            </div>
-          </div>
-          <div class="app-lbl">Ask Stylist</div>
-          <div class="ca">
-            <div class="ab">Here's a look for your meeting — navy blazer, white tee, slim chinos.</div>
-            <div class="ub">Make it more casual 🎯</div>
-            <div class="ab">Swap the blazer for your olive jacket. Much more relaxed.</div>
-          </div>
-          <div class="at">
-            <div class="ti act"><span class="ticon">🏠</span>Home</div>
-            <div class="ti"><span class="ticon">👔</span>Closet</div>
-            <div class="ti"><span class="ticon">📅</span>Plan</div>
-            <div class="ti"><span class="ticon">🛍️</span>Shop</div>
-            <div class="ti"><span class="ticon">💰</span>Earn</div>
-          </div>
-        </div>
-      </div>
-      <div class="bf b1"><span class="bd c"></span>AI Outfit Matched</div>
-      <div class="bf b2"><span class="bd"></span>Virtual Try-On Active</div>
-      <div class="bf b3"><span class="bd c"></span>$12 earned this week</div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="fcols">
+      <div class="about"><a class="logo" href="/"><span aria-hidden="true">&#x2736;</span> Outfitted</a><p style="margin-top:.6rem;max-width:19rem">Outfits from the clothes you own, and from the stores you love. Outfitted AI LLC, Los Angeles.</p></div>
+      <div><h4>Outfitted</h4><a href="/">For Shoppers</a><a href="/stores">For Stores</a><a href="/internships">Internships</a><a href="/about">About</a></div>
+      <div><h4>Company</h4><a href="/investors">Investors</a><a href="/merch">Merch</a><a href="mailto:Outfittedai@outlook.com">Outfittedai@outlook.com</a></div>
+      <div><h4>Legal</h4><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
     </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="how" id="how">
-    <div class="section-eyebrow">How It Works</div>
-    <h2>Three steps to a<br/><em>smarter wardrobe.</em></h2>
-    <p class="section-sub">Outfitted connects your closet, your style, and your shopping — all in one place.</p>
-    <div class="how-grid">
-      <div class="how-card">
-        <div class="how-num">01</div>
-        <div class="how-title">Build Your Closet</div>
-        <div class="how-desc">Upload your clothes using your camera or photo library. Our AI automatically categorizes each item, assigns style tags, and builds your personal wardrobe database.</div>
-      </div>
-      <div class="how-card">
-        <div class="how-num">02</div>
-        <div class="how-title">Get Styled Daily</div>
-        <div class="how-desc">Tell us your occasion and your AI stylist selects the perfect outfit from your actual closet. Try it on virtually before you wear it.</div>
-      </div>
-      <div class="how-card">
-        <div class="how-num">03</div>
-        <div class="how-title">Shop & Earn</div>
-        <div class="how-desc">Discover new pieces personalized to your style DNA. List items you no longer wear to our P2P marketplace and earn directly through the app. Your closet works for you.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section id="features">
-    <div class="section-eyebrow">Features</div>
-    <h2>Everything your wardrobe<br/><em>needs to perform.</em></h2>
-    <p class="section-sub">Built with proprietary styling intelligence, AI virtual try-on, and a multi-model AI architecture.</p>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">✦</div>
-        <div class="feature-title">AI Outfit Suggestions</div>
-        <div class="feature-desc">Powered by proprietary professional styling intelligence. Every suggestion considers your body type, occasion, color theory, and personal style profile — not just your categories.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">👗</div>
-        <div class="feature-title">Virtual Try-On</div>
-        <div class="feature-desc">See any garment on your actual body before you wear or buy it. AI composites your selfie with closet items or shop products in seconds.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎤</div>
-        <div class="feature-title">Voice Styling</div>
-        <div class="feature-desc">Tap the mic and describe what you need. Your AI stylist responds with a curated look. Hands-free, conversational, instant.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🛍️</div>
-        <div class="feature-title">Smart Shop Tab</div>
-        <div class="feature-desc">Leading fashion retailers curated to your closet's style DNA. Not random products — pieces that actually complement what you already own.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">💰</div>
-        <div class="feature-title">P2P Resale</div>
-        <div class="feature-desc">List unworn items from your closet to the Outfitted marketplace in under a minute. Stripe-powered checkout. Your closet generates income.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📅</div>
-        <div class="feature-title">Weekly Outfit Planner</div>
-        <div class="feature-desc">AI-generated 7-day plans with distinct archetypes per day. Tracks what you wear, scores your closet utilization, and surfaces resale candidates automatically.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TEAM -->
-  <section class="team-preview">
-    <div class="section-eyebrow">The Team</div>
-    <h2>Fashion expertise<br/>meets <em>AI execution.</em></h2>
-    <p class="section-sub" style="color:rgba(255,245,233,0.6)">Built by a USC Marshall entrepreneur and a professional fashion stylist — combining AI infrastructure with real styling expertise.</p>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-avatar"><img src="jj-headshot.png" alt="Johnathan Joseph" /></div>
-        <div class="team-name">Johnathan Joseph</div>
-        <div class="team-role">Founder & CEO</div>
-        <div class="team-bio">USC Marshall MS Entrepreneurship & Innovation. Built Outfitted v1–v6 in under 6 months using an AI-leveraged development model. 2nd place USC Marshall Tech Fest AI Product Challenge 2026.</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar"><img src="tiffany-headshot.png" alt="Tiffany Brown" /></div>
-        <div class="team-name">Tiffany Brown</div>
-        <div class="team-role">Co-Founder, Growth & Style</div>
-        <div class="team-bio">Former professional fashion stylist for Fabletics and major brands. Her expertise is the creative intelligence behind every AI outfit recommendation Outfitted generates.</div>
-      </div>
-    </div>
-    <div style="margin-top:2.5rem;">
-      <a href="founders.html" class="btn-primary">Meet the full team →</a>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="section-eyebrow">Get Started</div>
-    <h2>Your AI stylist is<br/><em>waiting for you.</em></h2>
-    <p class="section-sub">Download Outfitted free on the App Store. AI-powered personal styling — wear more, shop smarter, earn from your closet.</p>
-    <div class="cta-buttons">
-      <a href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" class="btn-primary">Download on the App Store →</a>
-      <a href="mailto:Outfittedai@outlook.com" class="btn-secondary">Contact us</a>
-    </div>
-    <div style="margin-top:1.5rem;">
-      <a href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank">
-        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height:44px;" />
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-top">
-      <div class="footer-logo"><span class="spark">✦</span> Outfitted</div>
-      <nav class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="founders.html">Founders</a>
-        <a href="product.html">Product</a>
-        <a href="partners.html">Partners</a>
-        <a href="invest.html">Investors</a>
-        <a href="mailto:Outfittedai@outlook.com">Contact</a>
-      </nav>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-copy">© 2026 Outfitted AI LLC. Los Angeles, CA. All rights reserved.</div>
-      <div class="footer-legal">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="stripe-return.html" style="display:none">Stripe Return</a>
-      </div>
-    </div>
-  </footer>
-
+    <div class="fbase"><span>© 2026 Outfitted AI LLC</span><span>Made in Los Angeles</span></div>
+  </div>
+</footer>
+<script src="/site.js"></script>
 </body>
 </html>
