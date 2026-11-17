@@ -1,0 +1,18 @@
+Background music for the Outfitted demo videos (Occasion Commerce, Online Styling Widget, In-store Experience)
+
+Track: "Your Boutique" background (untitled), 72 s, 76 BPM, Cmaj9 - Am9 - Fmaj9 - G6/9
+Made: 2026-11-17, for Outfitted AI LLC
+
+Origin: an original composition, synthesized from scratch by the script music.mjs in this folder
+(sine-wave pads and a plucked arpeggio, then a gentle echo and filtering in ffmpeg). It uses no
+samples, loops, presets, recordings or melodies from any third party, and no AI music service.
+
+Rights: created for and owned by Outfitted AI LLC. Free to use commercially in any medium,
+including these demo videos, the website, ads and sales outreach, with no attribution required.
+No third-party license applies.
+
+Voice: generated with OpenAI text-to-speech (model gpt-4o-mini-tts, voice "coral") on Outfitted's
+own OpenAI account, from scripts written for Outfitted. OpenAI's usage policies ask that viewers
+be told the voice is AI-generated; the demo page says so.
+
+Files: music.mjs (the generator), audio/music.wav (raw), audio/music-final.wav (as mixed).
