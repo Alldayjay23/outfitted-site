@@ -1,10 +1,11 @@
 Background music for the Outfitted demo videos (Occasion Commerce, Online Styling Widget, In-store Experience)
 
-Track: "Your Boutique" background (untitled), 72 s, 76 BPM, Cmaj9 - Am9 - Fmaj9 - G6/9
-Made: 2026-11-17, for Outfitted AI LLC
+Track: "Your Boutique" background, version 2 (light and upbeat), 72 s, 112 BPM, D major, Dmaj7 - Aadd9 - Bm7 - Gmaj7
+Made: 2026-11-17 (replaces version 1 of the same day), for Outfitted AI LLC
 
 Origin: an original composition, synthesized from scratch by the script music.mjs in this folder
-(sine-wave pads and a plucked arpeggio, then a gentle echo and filtering in ffmpeg). It uses no
+(a marimba-like plucked riff, soft bass, airy pad, light shaker and finger-snap, all from
+sine waves and noise, then a gentle echo and filtering in ffmpeg). It uses no
 samples, loops, presets, recordings or melodies from any third party, and no AI music service.
 
 Rights: created for and owned by Outfitted AI LLC. Free to use commercially in any medium,
