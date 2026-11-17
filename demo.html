@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light only" />
+  <!-- Unlisted: not in the menu, not for search engines. -->
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Outfitted Demos</title>
+  <meta name="description" content="Short demos of Outfitted: occasion commerce, the online styling widget and the in-store experience." />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/site.css" />
+  <style>
+    .demo-list { display: grid; gap: clamp(3rem, 7vw, 5rem); }
+    .demo { display: grid; gap: 1.1rem; }
+    .demo h2 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); }
+    .demo p { color: var(--muted); max-width: 40rem; }
+    .demo video { width: 100%; height: auto; aspect-ratio: 16 / 9; display: block; border-radius: 18px; background: var(--ink); box-shadow: 0 18px 50px rgba(26,20,16,0.12); }
+    .demo .meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; font-size: 0.9rem; color: var(--muted); }
+    .demo .meta a { color: var(--coral-dark); }
+    .demo-note { font-size: 0.9rem; color: var(--muted); max-width: 42rem; }
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Outfitted home"><span aria-hidden="true">&#x2736;</span> Outfitted</a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="/">For Shoppers</a></li>
+        <li><a href="/stores">For Stores</a></li>
+        <li><a href="/internships">Internships</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-coral btn-small nav-cta" href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" rel="noopener">Get the app</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><i></i></button>
+  </div>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Main">
+    <ul>
+      <li><a href="/">For Shoppers</a></li>
+      <li><a href="/stores">For Stores</a></li>
+      <li><a href="/internships">Internships</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a class="btn btn-coral" href="https://apps.apple.com/us/app/outfitted-wear-shop-earn/id6753196803" target="_blank" rel="noopener">Get the app</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="wrap" style="grid-template-columns:1fr">
+      <div class="hero-copy" style="max-width:48rem">
+        <div class="eyebrow">Demos</div>
+        <h1>See Outfitted <em>in action.</em></h1>
+        <p class="lede">Three short demos, recorded on our working pages. Outfits are built from the store’s own inventory, and shoppers check out on the store’s own site.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-sand" style="padding-top:clamp(2.5rem,6vw,4rem)">
+    <div class="wrap demo-list">
+      <article class="demo" id="occasion">
+        <div class="eyebrow">For event platforms and producers</div>
+        <h2>Occasion Commerce</h2>
+        <p>Guests open the event link from their invitation, pick a budget and their size, and add a complete outfit to the store’s cart in one tap.</p>
+        <video controls playsinline preload="metadata" poster="/media/demo/occasion-poster.jpg"><source src="/media/demo/occasion.mp4" type="video/mp4" /></video>
+        <div class="meta"><span>45 seconds</span><a href="/media/demo/occasion.mp4" download>Download MP4</a></div>
+      </article>
+
+      <article class="demo" id="widget">
+        <div class="eyebrow">For online stores</div>
+        <h2>Online Styling Widget</h2>
+        <p>“Style me with this” sits on the store’s product pages and shows complete outfits from what’s in stock. Shoppers shuffle, pick sizes and add the whole look.</p>
+        <video controls playsinline preload="metadata" poster="/media/demo/widget-poster.jpg"><source src="/media/demo/widget.mp4" type="video/mp4" /></video>
+        <div class="meta"><span>30 seconds</span><a href="/media/demo/widget.mp4" download>Download MP4</a></div>
+      </article>
+
+      <article class="demo" id="in-store">
+        <div class="eyebrow">For boutiques</div>
+        <h2>In-store Experience</h2>
+        <p>A code in the fitting room opens outfits made from pieces in the store today, with where to find each one and the sizes on hand.</p>
+        <video controls playsinline preload="metadata" poster="/media/demo/instore-poster.jpg"><source src="/media/demo/instore.mp4" type="video/mp4" /></video>
+        <div class="meta"><span>25 seconds</span><a href="/media/demo/instore.mp4" download>Download MP4</a></div>
+      </article>
+
+      <p class="demo-note">“Your Boutique” is a sample store made for these demos. Questions or a walkthrough: <a href="mailto:outfittedai@outlook.com">outfittedai@outlook.com</a>.</p>
+    </div>
+  </section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="fcols">
+      <div class="about"><a class="logo" href="/"><span aria-hidden="true">&#x2736;</span> Outfitted</a><p style="margin-top:.6rem;max-width:19rem">Outfits from the clothes you own, and from the stores you love. Outfitted AI LLC, Los Angeles.</p></div>
+      <div><h4>Outfitted</h4><a href="/">For Shoppers</a><a href="/stores">For Stores</a><a href="/internships">Internships</a><a href="/about">About</a></div>
+      <div><h4>Company</h4><a href="/investors">Investors</a><a href="/merch">Merch</a><a href="mailto:Outfittedai@outlook.com">Outfittedai@outlook.com</a></div>
+      <div><h4>Legal</h4><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
+    </div>
+    <div class="fbase"><span>© 2026 Outfitted AI LLC</span><span>Made in Los Angeles</span></div>
+  </div>
+</footer>
+<script src="/site.js"></script>
+</body>
+</html>
